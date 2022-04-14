@@ -1,1 +1,295 @@
-@import '../variables.scss';
+//@import '..../styles/variables.scss';
+
+.main-page {
+  box-sizing: border-box;
+
+  .name {
+    margin-left: 20px;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 15px 0px;
+
+    .logo {
+      a {
+        font-family: 'Lobster', cursive;
+        font-size: 30px;
+        margin-left: 10px;
+        border-left: 2px solid;
+        padding-left: 10px;
+        text-decoration: none;
+        color: black;
+      }
+
+      .fa-instagram {
+        font-size: 30px;
+        margin-left: 120px;
+      }
+    }
+
+    .search {
+      padding-top: 10px;
+
+      input {
+        width: 200px;
+        height: 25px;
+        background-color: #f8f8f8;
+        border: 1px solid #d7dce3;
+        &::placeholder {
+          text-align: center;
+        }
+      }
+    }
+
+    .icons {
+      margin-right: 50px;
+
+      .bt {
+        margin: 5px;
+        width: 30px;
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(250, 250, 250);
+    border: none;
+
+    .feeds {
+      width: 600px;
+      height: 900px;
+      background-color: rgb(250, 250, 250);
+      margin-right: 5px;
+
+      article {
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        margin-top: 50px;
+        border: 1px solid rgb(212, 212, 212);
+
+        .art-me {
+          display: flex;
+          padding: 10px;
+          height: 60px;
+
+          span {
+            img {
+              border-radius: 100%;
+              width: 40px;
+            }
+          }
+
+          p {
+            margin: 10px 10px;
+            font-weight: bold;
+          }
+        }
+
+        div {
+          .travel {
+            width: 100%;
+          }
+        }
+
+        div {
+          .likes {
+            display: flex;
+            justify-content: space-between;
+            font-size: 25px;
+
+            div {
+              margin: 10px 20px;
+
+              .fa-heart {
+                color: red;
+              }
+
+              i {
+                margin-right: 10px;
+              }
+            }
+          }
+
+          .commentLists {
+            width: 100%;
+            margin: 10px 0px;
+
+            li {
+              .name-delete {
+                display: flex;
+                justify-content: space-between;
+              }
+            }
+          }
+
+          .reply {
+            display: flex;
+            margin-top: 20px;
+
+            input {
+              width: 100%;
+              height: 50px;
+              border: none;
+              border-top: 1px solid rgb(235, 235, 235);
+              padding-left: 10px;
+              background-color: white;
+            }
+
+            button {
+              width: 50px;
+              border: none;
+              background-color: white;
+              color: lightblue;
+            }
+          }
+        }
+      }
+    }
+
+    .main-right {
+      width: 350px;
+      height: 500px;
+      background-color: rgb(250, 250, 250);
+      padding-left: 20px;
+
+      .friend-img {
+        img {
+          border-radius: 100%;
+          width: 50px;
+          border: 2px solid red;
+        }
+      }
+
+      .friend-name {
+        margin: 7px 10px;
+
+        .friend-id {
+          font-size: 15px;
+          font-weight: bold;
+        }
+        .friend-ago {
+          font-size: 15px;
+        }
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        margin: 60px 20px;
+
+        .right-me {
+          display: flex;
+
+          .right-img {
+            img {
+              border-radius: 100%;
+              width: 60px;
+            }
+          }
+
+          .right-name {
+            margin: 10px;
+
+            .right-id1 {
+              font-size: 18px;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .right-button {
+          button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            background-color: rgb(250, 250, 250);
+            color: dodgerblue;
+          }
+        }
+      }
+
+      .story {
+        background-color: white;
+        border: 1px solid rgb(219, 219, 219);
+
+        .story-title {
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
+
+          button {
+            background-color: white;
+            border: none;
+            color: dodgerblue;
+          }
+        }
+
+        .story-friend {
+          padding: 0px 20px;
+
+          .friend {
+            display: flex;
+            margin: 10px 0px;
+          }
+        }
+      }
+    }
+
+    .space {
+      height: 50px;
+      background-color: rgb(250, 250, 250);
+    }
+
+    .follow {
+      background-color: white;
+      border: 1px solid rgb(219, 219, 219);
+
+      .follow-title {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        button {
+          border: none;
+          background-color: white;
+          color: dodgerblue;
+        }
+      }
+
+      .follow-friend {
+        padding: 0px 20px;
+
+        .friend2 {
+          display: flex;
+          justify-content: space-between;
+          margin: 10px 0px;
+
+          .friend-div {
+            display: flex;
+          }
+
+          button {
+            background-color: white;
+            border: none;
+            color: dodgerblue;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
