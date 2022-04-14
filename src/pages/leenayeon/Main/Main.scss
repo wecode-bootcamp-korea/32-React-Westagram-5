@@ -1,6 +1,3 @@
-@import '../variables.scss';
-
-
 * {
   box-sizing: border-box;
 }
@@ -14,7 +11,7 @@ nav {
   margin-top: 15px;
 
   .logo_insta {
-    font-family: "Lobster", cursive;
+    font-family: 'Lobster', cursive;
     font-size: 25px;
     font-weight: lighter;
     padding-left: 10px;
@@ -80,40 +77,44 @@ main {
   border: 1px solid rgb(231, 230, 230);
   width: 45%;
   margin-left: 12%;
+
   background-color: white;
-}
+  article {
+    width: 100%;
 
-.art_foot {
-  margin: 0px 20px;
-}
-
-.art_head {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  .head_left {
-    display: flex;
-    flex-direction: row;
-
-    .ny_photo {
-      margin: 15px 15px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+    .art_foot {
+      margin: 0px 20px;
     }
 
-    .id_head {
-      padding: 25px 10px;
-      font-weight: bold;
-      font: 20px;
-    }
-  }
+    .art_head {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 
-  .icon_dot {
-    margin: 25px 15px;
-    width: 20px;
-    height: 20px;
+      .head_left {
+        display: flex;
+        flex-direction: row;
+
+        .ny_photo {
+          margin: 15px 15px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        .id_head {
+          padding: 25px 10px;
+          font-weight: bold;
+          font: 20px;
+        }
+      }
+
+      .icon_dot {
+        margin: 25px 15px;
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }
 
@@ -230,8 +231,10 @@ main {
 }
 
 .rightHead {
-  border: 1px solid gray;
   width: 90%;
+
+  display: flex;
+  flex-direction: row;
 
   .profilePhoto {
     width: 40px;
@@ -240,6 +243,16 @@ main {
     margin: 10px 10px;
   }
 
+  .profileMain {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+
+    .profileId {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
 }
 
 /* main right - main  부분 */
@@ -251,30 +264,119 @@ article {
 .rightStory {
   width: 100%;
   border: 1px solid gray;
+  border-radius: 3px;
+  background-color: white;
+  margin: 12px 0px;
 
   .storyHead {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 8px 8px;
+
+    .storyName {
+      font-size: 18px;
+      margin: 8px 8px;
+      color: gray;
+    }
+
+    .storyBtn {
+      font-size: 18px;
+      border: none;
+      font-weight: bold;
+      background-color: white;
+      margin: 6px 6px;
+    }
   }
 }
 
 .rightStory {
   border: 1px solid gray;
 
-  .storyMain {
-    display: flex;
-    flex-direction: row;
+  .storyList {
+    margin: 8px 20px;
 
-    .otherPhoto {
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-    }
-
-    .otherPerson {
+    .storyMain {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      margin: 8px 0px;
+
+      .otherPhoto {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-right: 17px;
+      }
+
+      .otherPerson {
+        display: flex;
+        flex-direction: column;
+
+        .otherTime {
+          color: gray;
+        }
+      }
     }
   }
+}
+
+/* main right -  main - 추천 부분 */
+
+.rightRecom {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 3px;
+  background-color: white;
+  margin: 12px 0px;
+
+  .recomHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px 8px;
+
+    .recomName {
+      font-size: 18px;
+      margin: 8px 8px;
+      color: gray;
+    }
+
+    .recomBtn {
+      font-size: 18px;
+      border: none;
+      font-weight: bold;
+      background-color: white;
+      margin: 6px 6px;
+    }
+  }
+
+  .recomList {
+    margin: 8px 20px;
+
+    .recomMain {
+      display: flex;
+      flex-direction: row;
+      margin: 8px 0px;
+
+      .recomPhoto {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-right: 17px;
+      }
+
+      .recomPerson {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+/* footer */
+
+footer {
+  width: 90%;
+  padding: 8px 8px;
+  color: gray;
 }
