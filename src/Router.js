@@ -20,20 +20,20 @@ function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login-leehyeongjoon" element={<LoginHJ />} />
+        {/* <Route path="/login-leehyeongjoon" element={<LoginHJ />} />
         <Route path="/main-leehyeongjoon" element={<MainHJ />} />
 
         <Route path="/login-ahnhoongi" element={<LoginHG />} />
         <Route path="/main-ahnhoongi" element={<MainHG />} />
 
         <Route path="/login-leenayeon" element={<LoginNY />} />
-        <Route path="/main-leenayeon" element={<MainNY />} />
+        <Route path="/main-leenayeon" element={<MainNY />} /> */}
 
         <Route path="/login-ahnurim" element={<Loginurim />} />
         <Route path="/main-ahnurim" element={<Mainurim />} />
 
-        <Route path="/login-kia" element={<Loginkia />} />
-        <Route path="/main-kia" element={<Mainkia />} />
+        {/* <Route path="/login-kia" element={<Loginkia />} />
+        <Route path="/main-kia" element={<Mainkia />} /> */}
       </Routes>
     </BrowserRouter>
   );

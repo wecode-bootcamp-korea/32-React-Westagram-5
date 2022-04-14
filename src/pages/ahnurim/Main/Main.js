@@ -2,8 +2,27 @@
 
 import React from "react";
 import "../Main/Main.scss";
+// import Component from "./Component/Comment"
 
 function Main() {
+  const commentList = [
+    {
+      id: 1,
+      userId: "dong-hyuck",
+      commentText: "유림님 어딜가요 공부하셔야죠",
+    },
+    {
+      id: 2,
+      userId: "name01",
+      commentText: "text01",
+    },
+    {
+      id: 3,
+      userId: "name02",
+      commentText: "text02",
+    },
+  ];
+
   return (
     <div className="main">
       <header>
@@ -77,7 +96,15 @@ function Main() {
             <p>
               <strong>gel_fos</strong> 멍멍
             </p>
-            <div className="time01">30분전</div>
+            {/* {commentList.map(comment => {
+              return (
+                <Comment
+                  userId={comment.userId}
+                  commentText={comment.commentText}
+                />
+              );
+            })} */}
+            }<div className="time01">30분전</div>
           </div>
           <div className="textarea">
             <input type="text" placeholder="댓글 달기..." />
