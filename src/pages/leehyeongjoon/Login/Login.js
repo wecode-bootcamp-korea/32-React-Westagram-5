@@ -1,15 +1,18 @@
-import React from 'react';
+import { useState } from 'react';
 import './Login.scss';
 import { Link } from 'react-router-dom';
-// import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  // const navigate = useNavigate();
-  // const onclick = () => {
-  //   if (true) {
-  //     navigate("/main");
-  //   }
-  // };
+  const [idInput, setIdInput] = useState('');
+  const handleIdInput = event => {
+    setIdInput(event.target.value);
+  };
+
+  const [pwInput, setPwInput] = useState('');
+  const handlePwInput = event => {
+    setPwInput(event.target.value);
+  };
+
   return (
     <div className="top">
       <div className="logo">westagram</div>
@@ -18,10 +21,16 @@ const Login = () => {
           className="logId"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
+          onChange={handleIdInput}
         />
-        <input className="logPw" type="password" placeholder="비밀번호" />
+        <input
+          className="logPw"
+          type="password"
+          placeholder="비밀번호"
+          onChange={handlePwInput}
+        />
       </div>
-      <Link to="/main">
+      <Link to="/main-leehyeongjoon">
         <button className="loginButton" onClick={onclick}>
           로그인
         </button>
