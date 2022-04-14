@@ -7,7 +7,11 @@ const Main = () => {
       <nav>
         <div className="nav-wrapper">
           <div className="title-wrapper">
-            <img className="insta-icon" src="/images/1384031.png" alt="" />
+            <img
+              className="insta-icon"
+              src="/images/leehyeongjoon/1384031.png"
+              alt=""
+            />
             <div className="title-line" />
             <div className="title">westagram</div>
           </div>
@@ -15,9 +19,21 @@ const Main = () => {
             <input className="input-box" type="text" />
           </div>
           <div className="icon-wrapper">
-            <img className="nav-icon" src="/images/explore.png" alt="" />
-            <img className="nav-icon" src="/images/heart.png" alt="" />
-            <img className="nav-icon" src="/images/profile.png" alt="" />
+            <img
+              className="nav-icon"
+              src="/images/leehyeongjoon/explore.png"
+              alt=""
+            />
+            <img
+              className="nav-icon"
+              src="/images/leehyeongjoon/heart.png"
+              alt=""
+            />
+            <img
+              className="nav-icon"
+              src="/images/leehyeongjoon/profile.png"
+              alt=""
+            />
           </div>
         </div>
       </nav>
@@ -28,7 +44,7 @@ const Main = () => {
               <div className="leftTitle">
                 <img
                   className="titletopprofile"
-                  src="/images/titletopprofile.JPG"
+                  src="/images/leehyeongjoon/titletopprofile.JPG"
                   alt=""
                 />
                 <div>_lhj</div>
@@ -36,7 +52,11 @@ const Main = () => {
               <i className="fa-solid fa-ellipsis menu-icon" />
             </div>
             <div className="main-img">
-              <img className="mainphoto" src="/images/dog1.jpeg" alt="" />
+              <img
+                className="mainphoto"
+                src="/images/leehyeongjoon/dog1.jpeg"
+                alt=""
+              />
             </div>
             <div className="main-icon">
               <div className="lefticon">
@@ -78,7 +98,11 @@ const Main = () => {
           </div>
           <div className="side-wrapper">
             <div className="side-nickname">
-              <img className="sideprofile" src="/images/profile.jpg" alt="" />
+              <img
+                className="sideprofile"
+                src="/images/leehyeongjoon/profile.jpg"
+                alt=""
+              />
               <div className="leftinformation">
                 <div className="side-id">_lhj</div>
                 <div className="threetwo">32기 이형준</div>
@@ -91,21 +115,33 @@ const Main = () => {
                 <div className="story-all">모두 보기</div>
               </div>
               <div className="story-info-wrapper">
-                <img className="story-img" src="/images/profile.jpg" alt="" />
+                <img
+                  className="story-img"
+                  src="/images/leehyeongjoon/profile.jpg"
+                  alt=""
+                />
                 <div className="story-profile">
                   <div className="story-id">_lhj</div>
                   <div className="story-info">16분전</div>
                 </div>
               </div>
               <div className="story-info-wrapper">
-                <img className="story-img" src="/images/profile.jpg" alt="" />
+                <img
+                  className="story-img"
+                  src="/images/leehyeongjoon/profile.jpg"
+                  alt=""
+                />
                 <div className="story-profile">
                   <div className="story-id">_lhj</div>
                   <div className="story-info">16분전</div>
                 </div>
               </div>
               <div className="story-info-wrapper">
-                <img className="story-img" src="/images/profile.jpg" alt="" />
+                <img
+                  className="story-img"
+                  src="/images/leehyeongjoon/profile.jpg"
+                  alt=""
+                />
                 <div className="story-profile">
                   <div className="story-id">_lhj</div>
                   <div className="story-info">16분전</div>
@@ -118,21 +154,33 @@ const Main = () => {
                 <div className="story-all">모두 보기</div>
               </div>
               <div className="story-info-wrapper">
-                <img className="story-img" src="/images/profile.jpg" alt="" />
+                <img
+                  className="story-img"
+                  src="/images/leehyeongjoon/profile.jpg"
+                  alt=""
+                />
                 <div className="story-profile">
                   <div className="story-id">_lhj</div>
                   <div className="story-info">16분전</div>
                 </div>
               </div>
               <div className="story-info-wrapper">
-                <img className="story-img" src="/images/profile.jpg" alt="" />
+                <img
+                  className="story-img"
+                  src="/images/leehyeongjoon/profile.jpg"
+                  alt=""
+                />
                 <div className="story-profile">
                   <div className="story-id">_lhj</div>
                   <div className="story-info">16분전</div>
                 </div>
               </div>
               <div className="story-info-wrapper">
-                <img className="story-img" src="/images/profile.jpg" alt="" />
+                <img
+                  className="story-img"
+                  src="/images/leehyeongjoon/profile.jpg"
+                  alt=""
+                />
                 <div className="story-profile">
                   <div className="story-id">_lhj</div>
                   <div className="story-info">16분전</div>
