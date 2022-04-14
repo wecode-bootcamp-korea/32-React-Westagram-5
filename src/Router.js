@@ -32,8 +32,8 @@ function Router() {
         <Route path="/login-ahnurim" element={<Loginurim />} />
         <Route path="/main-ahnurim" element={<Mainurim />} />
 
-        <Route path="/Login-kia" element={<Loginkia />} />
-        <Route path="/Main-kia" element={<Mainkia />} />
+        <Route path="/login-kia" element={<Loginkia />} />
+        <Route path="/main-kia" element={<Mainkia />} />
       </Routes>
     </BrowserRouter>
   );

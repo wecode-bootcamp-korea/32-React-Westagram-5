@@ -27,11 +27,15 @@ function Main() {
       <div class="main">
         <div class="feeds">
           <div class="profile" id="snap">
-            <img alt="profilePh" src="/Image/accountPhoto.png" class="ph" />
+            <img
+              alt="profilePh"
+              src="/images/kimkia/profileph.png"
+              class="ph"
+            />
             <div class="profileName">daily.snap.photography</div>
           </div>
           <div class="article">
-            <img alt="mainPh" src="/Image/mainph.png" />
+            <img alt="mainPh" src="/images/kimkia/mainph.png" />
             <div class="statusBox">hnmpot님 외 20명이 좋아합니다</div>
             <div class="commentBox"></div>
           </div>
@@ -39,36 +43,36 @@ function Main() {
 
         <div class="main-right">
           <div class="profile">
-            <img src="/Image/accountPhoto.png" class="ph" />
+            <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
             <div class="profileName">profile spot</div>
           </div>
           <div class="storyBox">
             스토리
             <div class="profile">
-              <img src="/Image/accountPhoto.png" class="ph" />
+              <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
               <div class="profileName">profile spot</div>
             </div>
             <div class="profile">
-              <img src="/Image/accountPhoto.png" class="ph" />
+              <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
               <div class="profileName">profile spot</div>
             </div>
             <div class="profile">
-              <img src="/Image/accountPhoto.png" class="ph" />
+              <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
               <div class="profileName">profile spot</div>
             </div>
           </div>
           <div class="storyBox">
             회원님을 위한 추천
             <div class="profile">
-              <img src="/Image/accountPhoto.png" class="ph" />
+              <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
               <div class="profileName">profile spot</div>
             </div>
             <div class="profile">
-              <img src="/Image/accountPhoto.png" class="ph" />
+              <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
               <div class="profileName">profile spot</div>
             </div>
             <div class="profile">
-              <img src="/Image/accountPhoto.png" class="ph" />
+              <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
               <div class="profileName">profile spot</div>
             </div>
           </div>

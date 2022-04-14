@@ -1,12 +1,11 @@
 import './Login.scss';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
   function goToMain() {
-    navigate('/Main-kia');
+    navigate('/main-kia');
   }
 
   return (
