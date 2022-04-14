@@ -69,7 +69,11 @@ const Main = () => {
               </div>
             </div>
             <div className="main-like">
-              <img className="wecode" src="wecode.jpeg" alt="" />
+              <img
+                className="wecode"
+                src="/images/leehyeongjoon/wecode.jpeg"
+                alt=""
+              />
               <strong className="wecode-padding">wecode님</strong>{' '}
               &nbsp;외&nbsp;
               <strong>100명</strong>이 좋아합니다
