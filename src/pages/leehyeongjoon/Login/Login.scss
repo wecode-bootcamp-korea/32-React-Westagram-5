@@ -6,7 +6,7 @@
   margin-top: 100px;
 
   .logo {
-    font-family: "Lobster", cursive;
+    font-family: 'Lobster', cursive;
     padding-top: 35px;
     font-size: 65px;
     margin-bottom: 61px;
@@ -40,6 +40,10 @@
     border-radius: 3px;
     color: white;
     font-weight: bold;
+
+    &.is-active {
+      background-color: #00376b;
+    }
   }
 
   .forget {

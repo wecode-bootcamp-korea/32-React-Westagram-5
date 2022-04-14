@@ -13,10 +13,19 @@ const Login = () => {
     setPwInput(event.target.value);
   };
 
+  const [isButtonActive, setIsButtonActive] = useState(false);
+  const buttonColorChange = () => {
+    if (idInput.includes('@') && pwInput.length >= 5) {
+      setIsButtonActive(true);
+    } else {
+      setIsButtonActive(false);
+    }
+  };
+
   return (
     <div className="top">
       <div className="logo">westagram</div>
-      <div className="user">
+      <div className="user" onKeyUp={buttonColorChange}>
         <input
           className="logId"
           type="text"
@@ -31,7 +40,10 @@ const Login = () => {
         />
       </div>
       <Link to="/main-leehyeongjoon">
-        <button className="loginButton" onClick={onclick}>
+        <button
+          className={`loginButton ${isButtonActive ? 'is-active' : ''}`}
+          onClick={onclick}
+        >
           로그인
         </button>
       </Link>
