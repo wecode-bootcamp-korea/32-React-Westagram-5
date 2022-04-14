@@ -1,1 +1,149 @@
-@import '../variables.scss';
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// white
+$insta-white: #fff;
+// gray
+$insta-gary: rgb(245, 245, 245);
+//border color rgba(var(--b6a,219,219,219),1);
+$button-blue: rgba(0, 149, 246, 0.3);
+
+* {
+  padding: 0;
+}
+
+.body {
+  padding: 0;
+  background-color: rgba(223, 224, 219, 0.226);
+}
+
+.navigator {
+  /* background-color: rgb(238, 238, 233); */
+  padding: 0;
+  border: rgb(247, 244, 244) 2px solid;
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+
+.navigator img {
+  width: 100px;
+  height: 80%;
+  padding: 8px 0px 0px 20px;
+}
+
+.fa-brands {
+  width: 50px;
+  font-size: 40px;
+  padding-top: 6px;
+  margin-left: 200px;
+}
+
+.searchBox {
+  background-color: rgb(237, 236, 229);
+  border-radius: 10px;
+  width: 150px;
+  height: 50%;
+  margin: 12px 50px 12px 50px;
+  padding-left: 150px;
+  flex: 1;
+}
+.navIcon {
+  font-size: 20px;
+  width: 400px;
+  height: 100%;
+  margin: 0px 200px 0px 50px;
+  padding: 15px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.fa-solid {
+  /* background-color: yellow; */
+  width: 100px;
+  height: 50px;
+  align-items: center;
+}
+
+.main {
+  /* border: red 2px solid;  */
+  padding: 80px 100px 10px 100px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.feeds {
+  /* border: rgb(224, 223, 217) 2px solid; */
+  border: none;
+  background-color: #fff;
+  padding: 0px 10px 30px 10px;
+  margin-right: 10px;
+  font-size: large;
+}
+
+.article {
+  /* border: blue 2px solid; */
+  /* background-color: blue; */
+  width: 500px;
+  height: 100vh;
+}
+
+.main-right {
+  border: rgb(224, 223, 217) 2px solid;
+  background-color: #fff;
+  width: 250px;
+  height: 700px;
+  align-items: flex-end;
+  border: none;
+}
+
+.profile {
+  display: flex;
+  border: none;
+  width: 200px;
+  height: 50px;
+  align-items: center;
+  padding: 10px 10px 10px 0px;
+  margin: 5px 5px 5px 5px;
+}
+
+#snap {
+  border: none;
+}
+
+.ph {
+  height: 100%;
+  margin-right: 10px;
+}
+
+.article img {
+  width: 100%;
+}
+
+.profileName {
+  align-items: center;
+}
+
+.storyBox {
+  border: none;
+  /* border: rgb(224, 223, 217) 2px solid; */
+}
+
+.statusBox {
+  /* border: #25be7c 2px solid; */
+  font-size: small;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.commentBox {
+  border: rgb(224, 223, 217) 2px solid;
+  height: 130px;
+}

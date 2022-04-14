@@ -14,7 +14,7 @@ import Loginurim from './pages/ahnurim/Login/Login';
 import Mainurim from './pages/ahnurim/Login/Login';
 
 import Loginkia from './pages/kimkia/Login/Login';
-import Mainkia from './pages/kimkia/Login/Login';
+import Mainkia from './pages/kimkia/Main/Main';
 
 function Router() {
   return (
@@ -32,8 +32,8 @@ function Router() {
         <Route path="/login-ahnurim" element={<Loginurim />} />
         <Route path="/main-ahnurim" element={<Mainurim />} />
 
-        <Route path="/login-kia" element={<Loginkia />} />
-        <Route path="/main-kia" element={<Mainkia />} />
+        <Route path="/Login-kia" element={<Loginkia />} />
+        <Route path="/Main-kia" element={<Mainkia />} />
       </Routes>
     </BrowserRouter>
   );
