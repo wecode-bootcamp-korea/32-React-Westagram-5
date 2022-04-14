@@ -1,5 +1,7 @@
-import React from 'react';
-import '../Main/Main.scss';
+/* eslint-disable */
+
+import React from "react";
+import "../Main/Main.scss";
 
 function Main() {
   return (
@@ -7,19 +9,27 @@ function Main() {
       <header>
         <div className="lnb">
           <div className="lnbleft">
-            <img alt="logo" src="./images/instagram.png" width="24px" />
+            <img alt="logo" src="./images/ahnurim/instagram.png" width="24px" />
             <p className="logo_01">westagram</p>
           </div>
 
           <div className="search">
-            <img alt="serch" src="./images/search.svg" width="17px" />
+            <img alt="serch" src="./images/ahnurim/search.svg" width="17px" />
             <input type="text" placeholder="검색" />
           </div>
 
           <div className="lnbright">
-            <img alt="explore" src="./images/explore.png" width="24px" />
-            <img alt="heart" src="./images/heart.png" width="24px" />
-            <img alt="profile" src="./images/profile.png" width="24px" />
+            <img
+              alt="explore"
+              src="./images/ahnurim/explore.png"
+              width="24px"
+            />
+            <img alt="heart" src="./images/ahnurim/heart.png" width="24px" />
+            <img
+              alt="profile"
+              src="./images/ahnurim/profile.png"
+              width="24px"
+            />
           </div>
         </div>
       </header>
@@ -32,17 +42,25 @@ function Main() {
               <span>urim_zzang</span>
             </div>
 
-            <img alt="more" src="./images/more.svg" width="25px" />
+            <img alt="more" src="./images/ahnurim/more.svg" width="25px" />
           </div>
-          <img alt="svg" src="./images/photo.jpg" />
+          <img alt="svg" src="./images/ahnurim/photo.jpg" />
 
           <div className="icon">
             <div className="bottom">
-              <img alt="heart" src="./images/heart.svg" width="24px" />
-              <img alt="comment" src="./images/comment.svg" width="23px" />
-              <img alt="share" src="./images/share.svg" width="23px" />
+              <img alt="heart" src="./images/ahnurim/heart.svg" width="24px" />
+              <img
+                alt="comment"
+                src="./images/ahnurim/comment.svg"
+                width="23px"
+              />
+              <img alt="share" src="./images/ahnurim/share.svg" width="23px" />
             </div>
-            <img alt="bookmark" src="./images/bookmark.svg" width="25px" />
+            <img
+              alt="bookmark"
+              src="./images/ahnurim/bookmark.svg"
+              width="25px"
+            />
           </div>
           <div className="textboxes">
             <div className="profile02"></div>
