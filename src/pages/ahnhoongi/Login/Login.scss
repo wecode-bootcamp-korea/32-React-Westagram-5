@@ -40,11 +40,16 @@
       .bt {
         width: 100%;
         height: 30px;
-        background-color: #c4e1fb;
         border: none;
         color: white;
         border-radius: 5px;
         margin: 12px auto;
+      }
+      .disabled {
+        background-color: #c4e1fb;
+      }
+      .abled {
+        background-color: blue;
       }
     }
 
