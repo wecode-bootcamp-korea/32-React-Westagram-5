@@ -75,7 +75,7 @@ const Main = props => (
                 </div>
               </li>
             </ul>
-            <form class="reply">
+            <form className="reply">
               <input
                 className="reply-input"
                 type="text"
@@ -95,7 +95,7 @@ const Main = props => (
               <img src="/images/ahnhoongi/me.jpg" alt="" />
             </div>
             <div className="right-name">
-              <div class="right-id1">hoongiahn</div>
+              <div className="right-id1">hoongiahn</div>
               <div className="right-id2">Hoon Gi Ahn</div>
             </div>
           </div>
