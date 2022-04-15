@@ -16,7 +16,7 @@ body {
     padding: 60px;
   }
   h1 {
-    font-family: "Lobster";
+    font-family: 'Lobster';
     font-weight: 1px;
     font-size: 55px;
     display: flex;
@@ -54,6 +54,9 @@ body {
     color: white;
     border: solid;
     border-radius: 5px;
+    &.Active {
+      background-color: rgb(0, 75, 179);
+    }
   }
   a {
     display: flex;
