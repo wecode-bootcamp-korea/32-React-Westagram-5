@@ -41,9 +41,19 @@
     color: white;
     font-weight: bold;
 
-    &.is-active {
-      background-color: #00376b;
-    }
+    // &.is-active {
+    //   background-color: #00376b;
+    // }
+  }
+  .loginButtonActive {
+    width: 268px;
+    height: 34px;
+    margin-top: 20px;
+    border: none;
+    background-color: #00376b;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
   }
 
   .forget {

@@ -14,12 +14,16 @@ const Login = () => {
   };
 
   const [isButtonActive, setIsButtonActive] = useState(false);
+
   const buttonColorChange = () => {
-    if (idInput.includes('@') && pwInput.length >= 5) {
-      setIsButtonActive(true);
-    } else {
-      setIsButtonActive(false);
-    }
+    idInput.includes('@') && pwInput.length >= 5
+      ? setIsButtonActive(true)
+      : setIsButtonActive();
+    // if (idInput.includes('@') && pwInput.length >= 5) {
+    //   setIsButtonActive(true);
+    // } else {
+    //   setIsButtonActive(false);
+    // }
   };
 
   return (
@@ -41,7 +45,8 @@ const Login = () => {
       </div>
       <Link to="/main-leehyeongjoon">
         <button
-          className={`loginButton ${isButtonActive ? 'is-active' : ''}`}
+          // className={`loginButton ${isButtonActive ? 'is-active' : ''}`}
+          className={isButtonActive ? 'loginButtonActive ' : 'loginButton'}
           onClick={onclick}
         >
           로그인

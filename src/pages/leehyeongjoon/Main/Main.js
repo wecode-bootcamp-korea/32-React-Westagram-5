@@ -1,7 +1,13 @@
-import React from 'react';
+import { useState } from 'react';
 import './Main.scss';
 
 const Main = () => {
+  const [Comment, setComment] = useState([]);
+  const commentInput = event => {
+    setinputComment(event.target.value);
+  };
+  const [inputComment, setinputComment] = useState('');
+
   return (
     <>
       <nav>
@@ -74,7 +80,7 @@ const Main = () => {
                 src="/images/leehyeongjoon/wecode.jpeg"
                 alt=""
               />
-              <strong className="wecode-padding">wecode님</strong>{' '}
+              <strong className="wecode-padding">wecode님</strong>
               &nbsp;외&nbsp;
               <strong>100명</strong>이 좋아합니다
             </div>
@@ -84,20 +90,28 @@ const Main = () => {
                 <div className="reply-info">주인놈아 집 좀 와라...</div>
                 <div className="see">더보기</div>
               </div>
-              <div className="reply">
-                <div className="reply-id">_lhj</div>
-                <div className="reply-info">주인놈아 집 좀 와라...</div>
-                <div className="see">더보기</div>
-              </div>
-              <div className="reply">
-                <div className="reply-id">_lhj</div>
-                <div className="reply-info">주인놈아 집 좀 와라...</div>
-                <div className="see">더보기</div>
-              </div>
+              {Comment.map(a => {
+                return <span>{a}</span>;
+              })}
             </div>
+
             <div className="main-reply-box">
-              <input className="name" type="text" placeholder="댓글 달기 ..." />
-              <input type="button" value="제출" className="reply-button" />
+              <input
+                className="name"
+                type="text"
+                placeholder="댓글 달기 ..."
+                onChange={commentInput}
+              />
+              <button
+                className="reply-button"
+                onClick={() => {
+                  const CommentCopy = [...Comment];
+                  CommentCopy.push(inputComment);
+                  setComment(CommentCopy);
+                }}
+              >
+                제출
+              </button>
             </div>
           </div>
           <div className="side-wrapper">
