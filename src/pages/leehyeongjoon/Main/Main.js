@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './Main.scss';
 
 const Main = () => {
   const [Comment, setComment] = useState([]);
+
   const commentInput = event => {
     setinputComment(event.target.value);
   };
@@ -90,8 +91,14 @@ const Main = () => {
                 <div className="reply-info">주인놈아 집 좀 와라...</div>
                 <div className="see">더보기</div>
               </div>
-              {Comment.map(a => {
-                return <span>{a}</span>;
+              {Comment.map((comment, index) => {
+                return (
+                  <div className="reply" key={index}>
+                    <div className="reply-id">{comment.userId}</div>
+                    <div className="reply-info">{comment.comment}</div>
+                    <div className="see">더보기</div>
+                  </div>
+                );
               })}
             </div>
 
@@ -100,14 +107,16 @@ const Main = () => {
                 className="name"
                 type="text"
                 placeholder="댓글 달기 ..."
+                value={inputComment}
                 onChange={commentInput}
               />
               <button
                 className="reply-button"
-                onClick={() => {
+                onClick={e => {
                   const CommentCopy = [...Comment];
-                  CommentCopy.push(inputComment);
+                  CommentCopy.push({ userId: '_lhj', comment: inputComment });
                   setComment(CommentCopy);
+                  setinputComment('');
                 }}
               >
                 제출
