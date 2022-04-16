@@ -31,10 +31,10 @@
         background-color: #fafafa;
         border: 1px solid #efefef;
         border-radius: 5px;
-        padding: 0px;
-        &::placeholder {
-          padding-left: 10px;
-        }
+        padding: 10px;
+        // &::placeholder {
+        //   padding-left: 0px;
+        //}
       }
 
       .bt {

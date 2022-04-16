@@ -29,6 +29,14 @@ const Login = () => {
     navigate('/main-ahnhoongi');
   };
 
+  const enter = event => {
+    if (isActive) {
+      if (event.key === 'Enter') {
+        goToMain();
+      }
+    }
+  };
+
   return (
     <body className="login-page">
       <main>
@@ -42,6 +50,7 @@ const Login = () => {
             placeholder="전화번호, 사용자 이름 또는 이메일"
             onChange={handleIdInput}
             onKeyUp={active}
+            onKeyPress={enter}
           />
           <input
             type="password"
@@ -49,12 +58,13 @@ const Login = () => {
             placeholder="비밀번호"
             onChange={handlePwInput}
             onKeyUp={active}
+            onKeyPress={enter}
           />
           <button
             type="button"
             className={`bt ${isActive ? 'abled' : 'disabled'}`}
-            onClick={goToMain}
             disabled={isActive ? false : true}
+            onClick={goToMain}
           >
             로그인
           </button>
