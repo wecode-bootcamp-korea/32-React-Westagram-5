@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Comment from './Comment';
 import './Main.scss';
 
 const Main = props => {
@@ -93,19 +94,9 @@ const Main = props => {
                   <span className="name">wecode</span>
                   <span> 여행가고 싶다~~ </span>
                 </li>
-
-                {commentArray.map((value, index) => (
-                  <li key={index} className="name-delete">
-                    <div>
-                      <span className="name">hoongiahn</span>
-                      {value}
-                    </div>
-                    <div>
-                      <span className="delete" />
-                    </div>
-                  </li>
-                ))}
               </ul>
+
+              <Comment comment={commentArray} />
 
               <form className="reply" onSubmit={onSubmit}>
                 <input
