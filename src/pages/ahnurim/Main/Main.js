@@ -1,27 +1,41 @@
 /* eslint-disable */
-
-import React from "react";
-import "../Main/Main.scss";
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import '../Main/Main.scss';
 // import Component from "./Component/Comment"
-
 function Main() {
-  const commentList = [
+  const [comment, setComment] = useState('');
+  const [commentArray, setCommentArray] = useState([]);
+
+  const handleReviewInput = e => {
+    setComment(e.target.value);
+  };
+
+  console.log(handleReviewInput);
+  const onSubmitComment = e => {
+    e.preventDefault();
+    if (comment !== '') {
+      // console.log(e.target);
+      const newArray = {
+        userId: 'user1',
+        comment: comment,
+      };
+      setCommentArray([...commentArray, newArray]);
+    }
+    setComment('');
+    // console.log(handleEnter);
+  };
+
+  const firstData = [
     {
-      id: 1,
-      userId: "dong-hyuck",
-      commentText: "유림님 어딜가요 공부하셔야죠",
-    },
-    {
-      id: 2,
-      userId: "name01",
-      commentText: "text01",
-    },
-    {
-      id: 3,
-      userId: "name02",
-      commentText: "text02",
+      userId: 'urim',
+      comment: '댓글추가',
     },
   ];
+
+  useEffect(() => {
+    setCommentArray(firstData);
+  }, []);
 
   return (
     <div className="main">
@@ -96,22 +110,36 @@ function Main() {
             <p>
               <strong>gel_fos</strong> 멍멍
             </p>
-            {/* {commentList.map(comment => {
-              return (
-                <Comment
-                  userId={comment.userId}
-                  commentText={comment.commentText}
-                />
-              );
-            })} */}
-            }<div className="time01">30분전</div>
+            {commentArray.map((data, index) => (
+              <li className="comment" key={index}>
+                <span className="userId">{data.userId}</span>
+                <span className="text"> {data.comment}</span>
+              </li>
+            ))}
+
+            <div className="time01">30분전</div>
           </div>
           <div className="textarea">
-            <input type="text" placeholder="댓글 달기..." />
-            <button id="submit">게시</button>
+            <form onSubmit={onSubmitComment}>
+              <input
+                className="clickComment"
+                type="text"
+                placeholder="댓글 달기..."
+                value={comment}
+                // onKeyPress={e => {
+                //   handleEnter(e);
+                // 엔터가 눌려도 새로고침을 막고, 엔터를 누른 후 댓글에 들어온 내용을 array 함수에 넣을것
+                // }}
+                onChange={e => {
+                  handleReviewInput(e);
+
+                  // 댓글 내용을 받아서 review를 갱신 , 댓글 내용을 끝까지 인식해주는 이벤트 메소드
+                }}
+              />
+              <button className="submit">게시</button>
+            </form>
           </div>
         </div>
-
         <div className="right">
           <div className="box02">
             <div className="rightprofile"></div>
