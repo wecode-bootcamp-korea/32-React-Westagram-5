@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import '../Main/Main.scss';
+import Comment from './component/Comment';
 // import Component from "./Component/Comment"
 function Main() {
   const [comment, setComment] = useState('');
@@ -36,6 +37,8 @@ function Main() {
   useEffect(() => {
     setCommentArray(firstData);
   }, []);
+
+  const ParentComponent = () => {};
 
   return (
     <div className="main">
@@ -110,11 +113,8 @@ function Main() {
             <p>
               <strong>gel_fos</strong> 멍멍
             </p>
-            {commentArray.map((data, index) => (
-              <li className="comment" key={index}>
-                <span className="userId">{data.userId}</span>
-                <span className="text"> {data.comment}</span>
-              </li>
+            {commentArray.map((value, i) => (
+              <Comment key={i} CommentInfo={value} />
             ))}
 
             <div className="time01">30분전</div>
@@ -179,7 +179,6 @@ function Main() {
               </div>
             </div>
           </div>
-
           <footer>
             <div className="footerarea">
               소개 도움말 홍보센터 API 채용정보 <br />
