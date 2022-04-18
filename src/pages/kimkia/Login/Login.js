@@ -1,21 +1,34 @@
 import './Login.scss';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
+  const [IdValue, setIdvalue] = useState('');
+  const [PWValue, setPWvalue] = useState('');
+  const [btnValue, setbtnvalue] = useState(true);
 
   function goToMain() {
     navigate('/main-kia');
   }
 
   function handleIdInput(E) {
-    let IdValue = E.target.value;
+    setIdvalue(E.target.value);
   }
 
   function handlePWInput(E) {
-    let PWValue = E.target.value;
+    setPWvalue(E.target.value);
   }
+
+  function active() {
+    if (IdValue.includes('@') && PWValue.length > 5) {
+      setbtnvalue(false);
+    } else {
+      setbtnvalue(true);
+    }
+  }
+
+  console.log(IdValue, PWValue);
 
   return (
     <div className="outsideBox">
@@ -26,6 +39,7 @@ function Login() {
           className="phone"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
+          onKeyUp={active}
         />
         <br />
         <input
@@ -33,10 +47,18 @@ function Login() {
           className="password"
           type="password"
           placeholder="비밀번호"
+          onKeyUp={active}
         />
         <br />
         <br />
-        <button onClick={goToMain}>로그인</button>
+        <input
+          type="button"
+          className={`button ${btnValue ? '' : 'activebtn'}`}
+          disabled={btnValue}
+          onClick={goToMain}
+          value="로그인"
+        />
+
         {/* <Link to="/Main">로그인</Link> */}
         <div className="forgetPW">비밀번호를 잊으셨나요?</div>
       </div>
@@ -44,3 +66,5 @@ function Login() {
   );
 }
 export default Login;
+
+//IdValue.includes('@')&&//PWValue.length ?

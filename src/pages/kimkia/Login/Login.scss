@@ -54,7 +54,7 @@ body {
         padding-left: 10px;
       }
 
-      button {
+      .button {
         color: #fff;
         background-color: $button-blue;
         opacity: 1;
@@ -63,6 +63,12 @@ body {
         width: 200px;
         height: 30px;
         font-size: small;
+      }
+
+      .activebtn {
+        width: 250px;
+        background-color: aqua;
+        transition: all 0.3s;
       }
 
       .forgetPW {
