@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Comment from './Comment';
+import Aside from './Aside/Aside';
+import { Link } from 'react-router-dom';
+import COMMENT_LIST from './CommentData';
 import './Main.scss';
 
-const Main = props => {
+const MainHG = props => {
   const [inputComment, setInputComment] = useState('');
 
   const handleInput = event => {
@@ -28,11 +31,11 @@ const Main = props => {
   };
 
   return (
-    <body className="main-page">
+    <div className="main-page">
       <nav>
         <div className="logo">
           <i className="fa-brands fa-instagram" />
-          <a href=" ">Westagram</a>
+          <Link to="/">Westagram</Link>
         </div>
         <div className="search">
           <input type="text" placeholder="검색" />
@@ -90,9 +93,23 @@ const Main = props => {
                 </span>
               </div>
               <ul className="commentLists">
+                {/* {COMMENT_LIST.map( comment = > {
+                  return (
+                    <li
+                    key = {comment.id}
+                    name = >
+
+
+                  )
+
+                })} */}
                 <li>
                   <span className="name">wecode</span>
                   <span> 여행가고 싶다~~ </span>
+                </li>
+                <li>
+                  <span className="name">wecode2</span>
+                  <span> 어디로 갈까? </span>
                 </li>
               </ul>
 
@@ -119,113 +136,10 @@ const Main = props => {
             </div>
           </article>
         </div>
-        <div className="main-right">
-          <div className="info">
-            <div className="right-me">
-              <div className="right-img">
-                <img src="/images/ahnhoongi/me.jpg" alt="" />
-              </div>
-              <div className="right-name">
-                <div className="right-id1">hoongiahn</div>
-                <div className="right-id2">Hoon Gi Ahn</div>
-              </div>
-            </div>
-            <div className="right-button">
-              <button>전환</button>
-            </div>
-          </div>
-          <div className="story">
-            <div className="story-title">
-              <div>스토리</div>
-              <button>모두 보기</button>
-            </div>
-            <div className="story-friend">
-              <div className="friend">
-                <div className="friend-img">
-                  <img src="/images/ahnhoongi/me.jpg" alt="" />
-                </div>
-                <div className="friend-name">
-                  <div className="friend-id">name</div>
-                  <div className="friend-ago">10분전</div>
-                </div>
-              </div>
-              <div className="friend">
-                <div className="friend-img">
-                  <img src="/images/ahnhoongi/me.jpg" alt="" />
-                </div>
-                <div className="friend-name">
-                  <div className="friend-id">name</div>
-                  <div className="friend-ago">10분전</div>
-                </div>
-              </div>
-              <div className="friend">
-                <div className="friend-img">
-                  <img src="/images/ahnhoongi/me.jpg" alt="" />
-                </div>
-                <div className="friend-name">
-                  <div className="friend-id">name</div>
-                  <div className="friend-ago">10분전</div>
-                </div>
-              </div>
-              <div className="friend">
-                <div className="friend-img">
-                  <img src="/images/ahnhoongi/me.jpg" alt="" />
-                </div>
-                <div className="friend-name">
-                  <div className="friend-id">name</div>
-                  <div className="friend-ago">10분전</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="follow">
-            <div className="follow-title">
-              <div>회원님을 위한 추천</div>
-              <button>모두 보기</button>
-            </div>
-            <div className="follow-friend">
-              <div className="friend2">
-                <div className="friend-div">
-                  <div className="friend-img">
-                    <img src="/images/ahnhoongi/me.jpg" alt="" />
-                  </div>
-                  <div className="friend-name">
-                    <div className="friend-id">name</div>
-                    <div className="friend-ago">10분전</div>
-                  </div>
-                </div>
-                <button>팔로우</button>
-              </div>
-              <div className="friend2">
-                <div className="friend-div">
-                  <div className="friend-img">
-                    <img src="/images/ahnhoongi/me.jpg" alt="" />
-                  </div>
-                  <div className="friend-name">
-                    <div className="friend-id">name</div>
-                    <div className="friend-ago">10분전</div>
-                  </div>
-                </div>
-                <button>팔로우</button>
-              </div>
-              <div className="friend2">
-                <div className="friend-div">
-                  <div className="friend-img">
-                    <img src="/images/ahnhoongi/me.jpg" alt="" />
-                  </div>
-                  <div className="friend-name">
-                    <div className="friend-id">name</div>
-                    <div className="friend-ago">10분전</div>
-                  </div>
-                </div>
-                <button>팔로우</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Aside />
       </main>
-    </body>
+    </div>
   );
 };
 
-export default Main;
+export default MainHG;
