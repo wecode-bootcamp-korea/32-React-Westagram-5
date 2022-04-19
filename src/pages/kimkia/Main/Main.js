@@ -1,9 +1,12 @@
 import './Main.scss';
-import React from 'react';
+import React, { useState } from 'react';
+
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faTruckLoading } from "@fortawesome/free-solid-svg-icons";
 
 function Main() {
+  const [commentValue, setCommentValue] = useState('');
+  const [viewComment, setViewComment] = useState([]);
   function Profile(props) {
     return (
       <>
@@ -14,6 +17,21 @@ function Main() {
       </>
     );
   }
+
+  function writeComment(e) {
+    setCommentValue(e.target.value);
+  }
+
+  const addingComment = () => {
+    var copyComment = [...viewComment];
+    if (commentValue.length > 0) {
+      copyComment.push({ userid: 'wecode_bootcamp', comment: commentValue });
+      setViewComment(copyComment);
+      setCommentValue('');
+    }
+  };
+
+  console.log(viewComment);
 
   return (
     <div>
@@ -49,7 +67,19 @@ function Main() {
           <div class="article">
             <img alt="mainPh" src="/images/kimkia/mainph.png" />
             <div class="statusBox">hnmpot님 외 20명이 좋아합니다</div>
-            <div class="commentBox"></div>
+
+            <div class="commentBox">
+              {viewComment.map(list => {
+                return (
+                  <div>
+                    <span>{list.userid}</span>
+                    <span>{list.comment}</span>
+                  </div>
+                );
+              })}
+              <input onChange={writeComment} />
+              <button onClick={addingComment}>게시</button>
+            </div>
           </div>
         </div>
 
