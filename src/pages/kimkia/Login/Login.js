@@ -28,8 +28,6 @@ function Login() {
     }
   }
 
-  console.log(IdValue, PWValue);
-
   return (
     <div className="outsideBox">
       <div className="insideBox">
@@ -58,7 +56,6 @@ function Login() {
           onClick={goToMain}
           value="로그인"
         />
-
         {/* <Link to="/Main">로그인</Link> */}
         <div className="forgetPW">비밀번호를 잊으셨나요?</div>
       </div>

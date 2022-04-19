@@ -4,6 +4,17 @@ import React from 'react';
 // import { faTruckLoading } from "@fortawesome/free-solid-svg-icons";
 
 function Main() {
+  function Profile(props) {
+    return (
+      <>
+        <div class="profile">
+          <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
+          {props.profileName}
+        </div>
+      </>
+    );
+  }
+
   return (
     <div>
       <nav class="navigator">
@@ -34,6 +45,7 @@ function Main() {
             />
             <div class="profileName">daily.snap.photography</div>
           </div>
+
           <div class="article">
             <img alt="mainPh" src="/images/kimkia/mainph.png" />
             <div class="statusBox">hnmpot님 외 20명이 좋아합니다</div>
@@ -42,39 +54,21 @@ function Main() {
         </div>
 
         <div class="main-right">
-          <div class="profile">
-            <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
-            <div class="profileName">profile spot</div>
-          </div>
+          <Profile profileName="profile.spot" />
+
           <div class="storyBox">
             스토리
-            <div class="profile">
-              <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
-              <div class="profileName">profile spot</div>
-            </div>
-            <div class="profile">
-              <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
-              <div class="profileName">profile spot</div>
-            </div>
-            <div class="profile">
-              <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
-              <div class="profileName">profile spot</div>
-            </div>
+            <Profile profileName="profile.spot" />
+            <Profile profileName="profile.spot" />
+            <Profile profileName="profile.spot" />
+            <Profile profileName="profile.spot" />
           </div>
           <div class="storyBox">
             회원님을 위한 추천
-            <div class="profile">
-              <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
-              <div class="profileName">profile spot</div>
-            </div>
-            <div class="profile">
-              <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
-              <div class="profileName">profile spot</div>
-            </div>
-            <div class="profile">
-              <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
-              <div class="profileName">profile spot</div>
-            </div>
+            <Profile profileName="profile.spot" />
+            <Profile profileName="profile.spot" />
+            <Profile profileName="profile.spot" />
+            <Profile profileName="profile.spot" />
           </div>
         </div>
       </div>
