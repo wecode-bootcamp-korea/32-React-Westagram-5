@@ -7,6 +7,15 @@ import Comment from './component/Comment';
 function Main() {
   const [comment, setComment] = useState('');
   const [commentArray, setCommentArray] = useState([]);
+  const [commentList, setCommentList] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/commentData.json')
+      .then(res => res.json())
+      .then(data => setCommentList(data));
+  }, []); // [] 의존성배열
+
+  console.log('코멘트>>>>>', commentList);
 
   const handleReviewInput = e => {
     setComment(e.target.value);
@@ -43,18 +52,18 @@ function Main() {
   return (
     <div className="main">
       <header>
-        <div className="lnb">
-          <div className="lnbleft">
+        <div className="Gnb">
+          <div className="Gnbleft">
             <img alt="logo" src="./images/ahnurim/instagram.png" width="24px" />
-            <p className="logo_01">westagram</p>
+            <p className="MainLogo">westagram</p>
           </div>
 
-          <div className="search">
+          <div className="GnbSearch">
             <img alt="serch" src="./images/ahnurim/search.svg" width="17px" />
             <input type="text" placeholder="검색" />
           </div>
 
-          <div className="lnbright">
+          <div className="GnbRight">
             <img
               alt="explore"
               src="./images/ahnurim/explore.png"
@@ -72,8 +81,8 @@ function Main() {
 
       <article className="container">
         <div className="articlebox">
-          <div className="header">
-            <div className="box01">
+          <div className="container_Header">
+            <div className="containerHeaderText">
               <div className="profileimage"></div>
               <span>urim_zzang</span>
             </div>
@@ -113,6 +122,9 @@ function Main() {
             <p>
               <strong>gel_fos</strong> 멍멍
             </p>
+            {commentList.map(list => {
+              return <Comment key={list.userId} CommentInfo={list} />;
+            })}
             {commentArray.map((value, i) => (
               <Comment key={i} CommentInfo={value} />
             ))}
@@ -140,7 +152,7 @@ function Main() {
             </form>
           </div>
         </div>
-        <div className="right">
+        <div className="RightMargin">
           <div className="box02">
             <div className="rightprofile"></div>
             <p>

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './Comment.scss';
 
 function Comment({ CommentInfo }) {
