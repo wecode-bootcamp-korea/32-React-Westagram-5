@@ -76,7 +76,11 @@ function Main() {
                   />
                 </div>
 
-                <ul className="ulCom"></ul>
+                <ul className="ulCom">
+                  <li>
+                    <span></span>
+                  </li>
+                </ul>
 
                 <div className="foot_time">
                   <span>42</span>분 전
