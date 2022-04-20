@@ -70,10 +70,6 @@ function FeedData({
               type="text"
               placeholder="댓글 달기..."
               value={comment}
-              // onKeyPress={e => {
-              //   handleEnter(e);
-              // 엔터가 눌려도 새로고침을 막고, 엔터를 누른 후 댓글에 들어온 내용을 array 함수에 넣을것
-              // }}
               onChange={e => {
                 handleReviewInput(e);
 
@@ -83,52 +79,6 @@ function FeedData({
             <button className="submit">게시</button>
           </form>
         </div>
-      </div>
-      <div className="RightMargin">
-        <div className="box02">
-          <div className="rightprofile" />
-          <p>
-            <strong>wecode_bootcamp</strong>
-          </p>
-        </div>
-        <div className="story">
-          <div className="storybox">
-            <p className="suggest">회원님을 위한 추천</p>
-            <p>모두 보기</p>
-          </div>
-          <div className="instory">
-            <div className="storysection">
-              <div className="storyprofile" />
-              <p>suggest_id_01</p>
-            </div>
-
-            <div className="followlist">
-              <p className="blue">팔로우</p>
-            </div>
-          </div>
-          <div className="instory">
-            <div className="storysection">
-              <div className="storyprofile" />
-              <p>suggest_id_02</p>
-            </div>
-            <p className="blue">팔로우</p>
-          </div>
-          <div className="instory">
-            <div className="storysection">
-              <div className="storyprofile" />
-              <p>suggest_id_03</p>
-            </div>
-            <div className="followlist">
-              <p className="blue">팔로우</p>
-            </div>
-          </div>
-        </div>
-        <footer>
-          <div className="footerarea">
-            소개 도움말 홍보센터 API 채용정보 <br />
-            개인정보처리방침 © 2022 INSTAGRAM FROM META
-          </div>
-        </footer>
       </div>
     </article>
   );

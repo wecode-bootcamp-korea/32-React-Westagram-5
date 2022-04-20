@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Login.scss';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -8,24 +8,20 @@ function Login() {
   // [너무 중요한값(변수), 중요한값을 바꿀 수 있는 함수]
   const [pw, setPw] = useState('');
   const navigate = useNavigate();
-  // const [button, setButton] = useState(true);
 
   const handleIdInput = e => {
     setId(e.target.value);
-    console.log(e.target.value);
-    // id.includes('@') && pw.length >= 5 ? setButton(false) : setButton(true);
   };
   const handlePwInput = e => {
     setPw(e.target.value);
-    // id.includes('@') && pw.length >= 5 ? setButton(false) : setButton(true);
   };
-  //handleIdInput 함수를 선언하고 , 이벤트 값을 받을거야 ,setId(값을 state에 넘길거야)
-  const goToMain = () => {
+  const goToMain = e => {
     navigate('/main-ahnurim');
   };
-  // const inputButton = e => {
-  //   id.includes('@') && pw.length >= 5 ? setButton(false) : setButton(true);
-  // };
+  //handleIdInput 함수를 선언하고 , 이벤트 값을 받을거야 ,setId(값을 state에 넘길거야)
+  const inputButton = e => {
+    id.includes('@') && pw.length >= 5 ? setButton(false) : setButton(true);
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -33,9 +29,7 @@ function Login() {
       goToMain();
     }
   }
-
   const setButton = id.includes('@') && pw.length >= 5;
-  console.log(setButton);
 
   return (
     // HTML 코드 삽입

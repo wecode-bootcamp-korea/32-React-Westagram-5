@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import '../Main/Main.scss';
-import Comment from './component/Comment';
+// import Comment from './component/Comment';
 import FeedData from './component/feed';
 // import Component from "./Component/Comment"
 function Main() {
@@ -27,6 +27,7 @@ function Main() {
 
   const handleReviewInput = e => {
     setComment(e.target.value);
+    console.log(setComment);
   };
 
   console.log(handleReviewInput);
@@ -86,20 +87,69 @@ function Main() {
           </div>
         </div>
       </header>
+      <div className="mainContainer">
+        <div className="feedCotainer">
+          {feedList.map(list => {
+            return (
+              <FeedData
+                key={list.id}
+                feedInfo={list}
+                commentList={commentList}
+                commentArray={commentArray}
+                onSubmitComment={onSubmitComment}
+                comment={comment}
+                handleReviewInput={handleReviewInput}
+              />
+            );
+          })}
+        </div>
+        <div className="RightMargin">
+          <div className="box02">
+            <div className="rightprofile" />
+            <p>
+              <strong>wecode_bootcamp</strong>
+            </p>
+          </div>
+          <div className="story">
+            <div className="storybox">
+              <p className="suggest">회원님을 위한 추천</p>
+              <p>모두 보기</p>
+            </div>
+            <div className="instory">
+              <div className="storysection">
+                <div className="storyprofile" />
+                <p>suggest_id_01</p>
+              </div>
 
-      {feedList.map(list => {
-        return (
-          <FeedData
-            key={list.id}
-            feedInfo={list}
-            commentList={commentList}
-            commentArray={commentArray}
-            onSubmitComment={onSubmitComment}
-            comment={comment}
-            handleReviewInput={handleReviewInput}
-          />
-        );
-      })}
+              <div className="followlist">
+                <p className="blue">팔로우</p>
+              </div>
+            </div>
+            <div className="instory">
+              <div className="storysection">
+                <div className="storyprofile" />
+                <p>suggest_id_02</p>
+              </div>
+              <p className="blue">팔로우</p>
+            </div>
+            <div className="instory">
+              <div className="storysection">
+                <div className="storyprofile" />
+                <p>suggest_id_03</p>
+              </div>
+              <div className="followlist">
+                <p className="blue">팔로우</p>
+              </div>
+            </div>
+          </div>
+          <footer>
+            <div className="footerarea">
+              소개 도움말 홍보센터 API 채용정보 <br />
+              개인정보처리방침 © 2022 INSTAGRAM FROM META
+            </div>
+          </footer>
+        </div>
+      </div>
     </div>
   );
 }
