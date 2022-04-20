@@ -9,9 +9,19 @@ function Login() {
   const [btnValue, setbtnvalue] = useState(true);
 
   function goToMain() {
-    navigate('/main-kia');
+    fetch('http://10.58.7.17:8000/users/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: IdValue,
+        password: PWValue,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과: ', result));
   }
 
+  {
+  }
   function handleIdInput(E) {
     setIdvalue(E.target.value);
   }
@@ -56,6 +66,7 @@ function Login() {
           onClick={goToMain}
           value="로그인"
         />
+
         {/* <Link to="/Main">로그인</Link> */}
         <div className="forgetPW">비밀번호를 잊으셨나요?</div>
       </div>

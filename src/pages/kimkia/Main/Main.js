@@ -1,5 +1,6 @@
 import './Main.scss';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+// import comment from './Data/commentDataKia.json';
 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faTruckLoading } from "@fortawesome/free-solid-svg-icons";
@@ -18,6 +19,18 @@ function Main() {
     );
   }
 
+  function Comment(props) {
+    let commentlist = props.comment;
+    return commentlist.map(list => {
+      return (
+        <div>
+          <span>{list.userid}</span> &nbsp;
+          <span>{list.comment}</span>
+        </div>
+      );
+    });
+  }
+
   function writeComment(e) {
     setCommentValue(e.target.value);
   }
@@ -32,6 +45,16 @@ function Main() {
   };
 
   console.log(viewComment);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/commentDataKia.json', {
+      method: 'GET', // GET method는 기본값이라서 생략이 가능합니다.
+    }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
+      .then(res => res.json())
+      .then(data => {
+        setViewComment(data);
+      });
+  }, []);
 
   return (
     <div>
@@ -69,14 +92,8 @@ function Main() {
             <div class="statusBox">hnmpot님 외 20명이 좋아합니다</div>
 
             <div class="commentBox">
-              {viewComment.map(list => {
-                return (
-                  <div>
-                    <span>{list.userid}</span>
-                    <span>{list.comment}</span>
-                  </div>
-                );
-              })}
+              <Comment comment={viewComment} />
+              )
               <input onChange={writeComment} />
               <button onClick={addingComment}>게시</button>
             </div>
