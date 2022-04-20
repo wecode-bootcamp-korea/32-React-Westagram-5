@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Comment from './Comment';
 import Aside from './Aside/Aside';
-import { Link } from 'react-router-dom';
-import COMMENT_LIST from './CommentData';
+import Nav from '../../../components/Nav/Nav';
+//import { Link } from 'react-router-dom';
+//import COMMENT_LIST from './CommentData';
 import './Main.scss';
 
 const MainHG = props => {
@@ -30,34 +31,21 @@ const MainHG = props => {
     setInputComment('');
   };
 
+  const [commentList, setCommentList] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/commentData.json', {
+      method: 'GET', // GET method는 기본값이라서 생략이 가능합니다.
+    }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
+      .then(res => res.json())
+      .then(data => {
+        setCommentList(data);
+      });
+  }, []);
+
   return (
     <div className="main-page">
-      <nav>
-        <div className="logo">
-          <i className="fa-brands fa-instagram" />
-          <Link to="/">Westagram</Link>
-        </div>
-        <div className="search">
-          <input type="text" placeholder="검색" />
-        </div>
-        <div className="icons">
-          <img
-            className="bt"
-            alt="나침반"
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-          />
-          <img
-            className="bt"
-            alt="하트"
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-          />
-          <img
-            className="bt"
-            alt="내정보"
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-          />
-        </div>
-      </nav>
+      <Nav />
       <main>
         <div className="feeds">
           <article>
@@ -93,24 +81,23 @@ const MainHG = props => {
                 </span>
               </div>
               <ul className="commentLists">
-                {/* {COMMENT_LIST.map( comment = > {
+                {commentList.map(comment => {
                   return (
-                    <li
-                    key = {comment.id}
-                    name = >
+                    <li key={comment.id}>
+                      <span className="name">{comment.userName}</span>
+                      <span>{comment.content}</span>
+                    </li>
+                  );
+                })}
 
-
-                  )
-
-                })} */}
-                <li>
-                  <span className="name">wecode</span>
+                {/* <li>
+                  <span >wecode</span>
                   <span> 여행가고 싶다~~ </span>
                 </li>
                 <li>
                   <span className="name">wecode2</span>
                   <span> 어디로 갈까? </span>
-                </li>
+                </li> */}
               </ul>
 
               <Comment comment={commentArray} />

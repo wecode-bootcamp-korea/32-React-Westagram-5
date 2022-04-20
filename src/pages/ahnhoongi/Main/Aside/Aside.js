@@ -1,99 +1,178 @@
 import './Aside.scss';
+import { Link } from 'react-router-dom';
 
 function Aside() {
   return (
     <div className="aside">
       <div className="info">
         <div className="info-me">
-          <img className="info-img" src="/images/ahnhoongi/me.jpg" alt="" />
+          <img
+            className="info-img"
+            src="/images/ahnhoongi/me.jpg"
+            alt="프로필사진"
+          />
           <div className="info-name">
-            <div className="info-id1">hoongiahn</div>
-            <div className="info-id2">Hoon Gi Ahn</div>
+            <p className="info-id1">hoongiahn</p>
+            <p className="info-id2">Hoon Gi Ahn</p>
           </div>
         </div>
-        <div className="blue-link">
-          <a href=" ">전환</a>
+        <div className="info-link">
+          <Link to="" className="blue-link">
+            전환
+          </Link>
         </div>
       </div>
       <div className="story">
         <div className="story-title">
-          <div>스토리</div>
-          <a href=" ">모두 보기</a>
+          <p>스토리</p>
+          <Link to="" className="blue-link">
+            모두 보기
+          </Link>
         </div>
-        <div className="story-friend">
+        <div className="story-friend-wrapper">
           <div className="friend">
-            <img className="friend-img" src="/images/ahnhoongi/me.jpg" alt="" />
-            <div className="friend-name">
-              <div className="friend-id">name</div>
-              <div className="friend-ago">10분전</div>
+            <div className="friend-img-wrapper">
+              <img
+                className="friend-img"
+                src="/images/ahnhoongi/me.jpg"
+                alt="프로필사진"
+              />
+              <div className="friend-name">
+                <p className="friend-id">name</p>
+                <p className="friend-ago">10분전</p>
+              </div>
+            </div>
+            <div className="follow-link">
+              <Link to="" className="blue-link" />
             </div>
           </div>
           <div className="friend">
-            <img className="friend-img" src="/images/ahnhoongi/me.jpg" alt="" />
-            <div className="friend-name">
-              <div className="friend-id">name</div>
-              <div className="friend-ago">10분전</div>
+            <div className="friend-img-wrapper">
+              <img
+                className="friend-img"
+                src="/images/ahnhoongi/me.jpg"
+                alt="프로필사진"
+              />
+              <div className="friend-name">
+                <p className="friend-id">name</p>
+                <p className="friend-ago">10분전</p>
+              </div>
+            </div>
+            <div className="follow-link">
+              <Link to="" className="blue-link" />
             </div>
           </div>
           <div className="friend">
-            <img className="friend-img" src="/images/ahnhoongi/me.jpg" alt="" />
-            <div className="friend-name">
-              <div className="friend-id">name</div>
-              <div className="friend-ago">10분전</div>
+            <div className="friend-img-wrapper">
+              <img
+                className="friend-img"
+                src="/images/ahnhoongi/me.jpg"
+                alt="프로필사진"
+              />
+              <div className="friend-name">
+                <p className="friend-id">name</p>
+                <p className="friend-ago">10분전</p>
+              </div>
+            </div>
+            <div className="follow-link">
+              <Link to="" className="blue-link" />
             </div>
           </div>
           <div className="friend">
-            <img className="friend-img" src="/images/ahnhoongi/me.jpg" alt="" />
-            <div className="friend-name">
-              <div className="friend-id">name</div>
-              <div className="friend-ago">10분전</div>
+            <div className="friend-img-wrapper">
+              <img
+                className="friend-img"
+                src="/images/ahnhoongi/me.jpg"
+                alt="프로필사진"
+              />
+              <div className="friend-name">
+                <p className="friend-id">name</p>
+                <p className="friend-ago">10분전</p>
+              </div>
+            </div>
+            <div className="follow-link">
+              <Link to="" className="blue-link" />
+            </div>
+          </div>
+          <div className="friend">
+            <div className="friend-img-wrapper">
+              <img
+                className="friend-img"
+                src="/images/ahnhoongi/me.jpg"
+                alt="프로필사진"
+              />
+              <div className="friend-name">
+                <p className="friend-id">name</p>
+                <p className="friend-ago">10분전</p>
+              </div>
+            </div>
+            <div className="follow-link">
+              <Link to="" className="blue-link" />
             </div>
           </div>
         </div>
       </div>
       <div className="follow">
         <div className="follow-title">
-          <div>회원님을 위한 추천</div>
-          <button>모두 보기</button>
+          <p>회원님을 위한 추천</p>
+          <Link to="" className="blue-link">
+            모두 보기
+          </Link>
         </div>
-        <div className="follow-friend">
-          <div className="friend2">
-            <div className="friend-div">
+        <div className="follow-friend-wrapper">
+          <div className="friend">
+            <div className="friend-img-wrapper">
               <img
                 className="friend-img"
                 src="/images/ahnhoongi/me.jpg"
-                alt=""
+                alt="프로필사진"
               />
               <div className="friend-name">
-                <div className="friend-id">name</div>
-                <div className="friend-ago">10분전</div>
+                <p className="friend-id">name</p>
+                <p className="friend-ago">10분전</p>
               </div>
             </div>
-            <button>팔로우</button>
+            <div className="follow-link">
+              <Link to="" className="blue-link">
+                팔로우
+              </Link>
+            </div>
           </div>
-          <div className="friend2">
-            <div className="friend-div">
-              <div className="friend-img">
-                <img src="/images/ahnhoongi/me.jpg" alt="" />
-              </div>
+          <div className="friend">
+            <div className="friend-img-wrapper">
+              <img
+                className="friend-img"
+                src="/images/ahnhoongi/me.jpg"
+                alt="프로필사진"
+              />
               <div className="friend-name">
-                <div className="friend-id">name</div>
-                <div className="friend-ago">10분전</div>
+                <p className="friend-id">name</p>
+                <p className="friend-ago">10분전</p>
               </div>
             </div>
-            <button>팔로우</button>
+            <div className="follow-link">
+              <Link to="" className="blue-link">
+                팔로우
+              </Link>
+            </div>
           </div>
-          <div className="friend2">
-            <div className="friend-div">
-              <div className="friend-img">
-                <img src="/images/ahnhoongi/me.jpg" alt="" />
-              </div>
+          <div className="friend">
+            <div className="friend-img-wrapper">
+              <img
+                className="friend-img"
+                src="/images/ahnhoongi/me.jpg"
+                alt="프로필사진"
+              />
               <div className="friend-name">
-                <div className="friend-id">name</div>
-                <div className="friend-ago">10분전</div>
+                <p className="friend-id">name</p>
+                <p className="friend-ago">10분전</p>
               </div>
             </div>
-            <button>팔로우</button>
+            <div className="follow-link">
+              <Link to="" className="blue-link">
+                팔로우
+              </Link>
+            </div>
           </div>
         </div>
       </div>

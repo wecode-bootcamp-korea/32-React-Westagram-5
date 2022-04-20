@@ -2,7 +2,7 @@ import './Comment.scss';
 
 function Comment(props) {
   // return console.log(props.commentArray);
-
+  //console.log(props.comment);
   return props.comment.map((value, index) => (
     <ul key={index}>
       <li className="name-delete">

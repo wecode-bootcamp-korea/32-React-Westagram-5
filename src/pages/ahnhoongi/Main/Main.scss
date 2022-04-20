@@ -9,58 +9,6 @@
     margin-right: 5px;
   }
 
-  ul {
-    list-style-type: none;
-  }
-
-  nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid black;
-    padding: 15px 0px;
-
-    .logo {
-      a {
-        font-family: 'Lobster', cursive;
-        font-size: 30px;
-        margin-left: 10px;
-        border-left: 2px solid;
-        padding-left: 10px;
-        text-decoration: none;
-        color: black;
-      }
-
-      .fa-instagram {
-        font-size: 30px;
-        margin-left: 120px;
-      }
-    }
-
-    .search {
-      padding-top: 10px;
-
-      input {
-        width: 200px;
-        height: 25px;
-        background-color: #f8f8f8;
-        border: 1px solid #d7dce3;
-        &::placeholder {
-          text-align: center;
-        }
-      }
-    }
-
-    .icons {
-      margin-right: 50px;
-
-      .bt {
-        margin: 5px;
-        width: 30px;
-      }
-    }
-  }
-
   main {
     width: 100%;
     height: 100%;
