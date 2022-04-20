@@ -1,44 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Main.scss';
 import Feed from './Feed/Feed';
+import Aside from './Aside/Aside';
+import Nav from './Nav/Nav';
 
 const Main = () => {
+  const [data, setData] = useState([]);
+
+  const dataFetch = () => {
+    fetch('Data/commentData.json')
+      .then(res => res.json())
+      .then(res => {
+        setData(res);
+      });
+  };
+  useEffect(() => {
+    dataFetch();
+  }, []);
+  console.log(data);
   return (
     <>
-      <nav>
-        <div className="nav-wrapper">
-          <div className="title-wrapper">
-            <img
-              className="insta-icon"
-              src="/images/leehyeongjoon/1384031.png"
-              alt=""
-            />
-            <div className="title-line" />
-            <div className="title">westagram</div>
+      <Nav />
+      <main>
+        <div className="totalmain">
+          <div className="main-wrapper">
+            {data.map((item, index) => {
+              return <Feed feedData={item} key={index} />;
+            })}
           </div>
-          <div className="input-wrapper">
-            <input className="input-box" type="text" />
-          </div>
-          <div className="icon-wrapper">
-            <img
-              className="nav-icon"
-              src="/images/leehyeongjoon/explore.png"
-              alt=""
-            />
-            <img
-              className="nav-icon"
-              src="/images/leehyeongjoon/heart.png"
-              alt=""
-            />
-            <img
-              className="nav-icon"
-              src="/images/leehyeongjoon/profile.png"
-              alt=""
-            />
-          </div>
+          <Aside />
         </div>
-      </nav>
-      <Feed />;
+      </main>
     </>
   );
 };

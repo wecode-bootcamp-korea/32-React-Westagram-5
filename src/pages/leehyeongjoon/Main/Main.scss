@@ -2,87 +2,22 @@ body {
   margin: 0;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  height: 60px;
-  border: 1px solid rgb(232 232 232);
-  background-color: rgb(255 255 255);
-
-  .nav-wrapper {
-    display: flex;
-    justify-content: space-around;
-    width: 1130px;
-
-    .title-wrapper {
-      width: 190px;
-      display: flex;
-      justify-content: space-evenly;
-
-      .insta-icon {
-        width: 30px;
-        height: 30px;
-        padding-top: 12px;
-      }
-
-      .title-line {
-        width: 2px;
-        height: 40px;
-        margin-top: 10px;
-        background-color: black;
-      }
-
-      .title {
-        font-family: 'Lobster', cursive;
-        font-size: 30px;
-        margin-top: 4px;
-      }
-    }
-
-    .input-wrapper {
-      margin-top: 18px;
-
-      .input-box {
-        width: 175px;
-        height: 20px;
-        border: 1px solid #dbdbdb;
-        background: fafafa;
-        background: #fafafa;
-        border-radius: 3px;
-      }
-    }
-
-    .icon-wrapper {
-      display: flex;
-      margin-top: 18px;
-
-      .nav-icon {
-        width: 30px;
-        height: 30px;
-        padding-left: 10px;
-      }
-    }
-  }
-}
-
 main {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
   margin-bottom: 50px;
   background-color: rgb(249 249 249);
-  margin-top: 0px;
 
   .totalmain {
     display: flex;
-    margin-top: 80px;
+    // margin-top: 80px;
 
     .main-wrapper {
       display: flex;
       flex-direction: column;
       width: 616px;
-      border: 1px solid rgb(232 232 232);
-      background: white;
+      // border: 1px solid rgb(232 232 232);
+      background-color: rgb(249 249 249);
 
       .main-title-wrapper {
         display: flex;
@@ -173,30 +108,6 @@ main {
       }
     }
 
-    // .main-reply {
-    //   display: flex;
-    //   flex-direction: column;
-    //   margin-top: 10px;
-
-    //   .reply {
-    //     display: flex;
-    //     padding: 3px 0 0 10px;
-
-    //     .reply-id {
-    //       font-weight: bold;
-    //     }
-
-    //     .reply-info {
-    //       font-size: 15px;
-    //       padding: 0 5px 0 5px;
-    //     }
-
-    //     .see {
-    //       font-size: 15px;
-    //       color: rgb(153 153 153);
-    //     }
-    //   }
-    // }
     .main-reply-box {
       display: flex;
 
@@ -216,105 +127,5 @@ main {
         background: white;
       }
     }
-
-    // .side-wrapper {
-    //   display: flex;
-    //   flex-direction: column;
-    //   width: 293px;
-    //   height: 500px;
-
-    //   .side-nickname {
-    //     display: flex;
-    //     padding-left: 20px;
-    //     margin-bottom: 20px;
-    //     align-items: center;
-    //     justify-content: space-around;
-    //     width: 200px;
-    //     height: 100px;
-    //     border: none;
-
-    //     .sideprofile {
-    //       width: 60px;
-    //       height: 60px;
-    //       border-radius: 100%;
-    //     }
-
-    //     .leftinformation {
-    //       .side-id {
-    //         font-weight: bold;
-    //       }
-
-    //       .threetwo {
-    //         color: rgb(153 153 153);
-    //       }
-    //     }
-    //   }
-
-    //   .side-story {
-    //     border: 1px solid rgb(232 232 232);
-    //     margin-left: 20px;
-    //     margin-bottom: 10px;
-    //     background: white;
-
-    //     .story-text-wrapper {
-    //       display: flex;
-    //       justify-content: space-between;
-    //       padding: 16px 15px 10px 20px;
-
-    //       .story-name {
-    //         font-size: 15px;
-    //         color: rgb(153 153 153);
-    //         font-weight: bold;
-    //       }
-
-    //       .story-all {
-    //         font-size: 15px;
-    //         font-weight: bold;
-    //       }
-    //     }
-
-    //     .story-info-wrapper {
-    //       display: flex;
-    //       margin-left: 18px;
-    //       margin-bottom: 10px;
-
-    //       .story-img {
-    //         width: 40px;
-    //         height: 40px;
-    //         border-radius: 100%;
-    //       }
-
-    //       .story-profile {
-    //         padding: 3px 10px;
-
-    //         .story-id {
-    //           font-size: 14px;
-    //           font-weight: bold;
-    //         }
-
-    //         .story-info {
-    //           font-size: 14px;
-    //           font-weight: bold;
-    //           color: rgb(153 153 153);
-    //         }
-    //       }
-    //     }
-    //   }
-
-    //   .graymal {
-    //     color: rgb(153 153 153);
-    //     margin-top: 10px;
-    //     margin-left: 20px;
-    //     line-height: 1.3;
-    //     font-size: 14px;
-    //   }
-
-    //   .twojero {
-    //     color: rgb(153 153 153);
-    //     padding-top: 20px;
-    //     margin-left: 20px;
-    //     font-size: 14px;
-    //   }
-    // }
   }
 }

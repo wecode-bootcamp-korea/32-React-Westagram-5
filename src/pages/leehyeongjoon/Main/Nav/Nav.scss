@@ -1,0 +1,61 @@
+nav {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  border: 1px solid rgb(232 232 232);
+  background-color: rgb(255 255 255);
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-around;
+
+    .title-wrapper {
+      width: 190px;
+      display: flex;
+      justify-content: space-evenly;
+
+      .insta-icon {
+        width: 40px;
+        height: 40px;
+        margin-top: 12px;
+      }
+
+      .title-line {
+        width: 2px;
+        height: 40px;
+        margin-top: 10px;
+        background-color: black;
+      }
+
+      .title {
+        font-family: 'Lobster', cursive;
+        font-size: 30px;
+        margin-top: 12px;
+      }
+    }
+
+    .input-wrapper {
+      margin-top: 18px;
+
+      .input-box {
+        width: 300px;
+        height: 30px;
+        border: 1px solid #dbdbdb;
+        background: fafafa;
+        background: #fafafa;
+        border-radius: 3px;
+      }
+    }
+
+    .icon-wrapper {
+      display: flex;
+      margin-top: 18px;
+
+      .nav-icon {
+        width: 40px;
+        height: 40px;
+        padding-left: 10px;
+      }
+    }
+  }
+}

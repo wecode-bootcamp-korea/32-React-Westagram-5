@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Login.scss';
 import { Link } from 'react-router-dom';
 
@@ -26,10 +26,25 @@ const Login = () => {
     // }
   };
 
+  // const [id, setId] = useState();
+  // const [pw, setpw] = useState();
+
+  const goToMain = () => {
+    fetch('http://10.58.7.44:8000/users/signup', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: idInput,
+        password: pwInput,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과: ', result));
+  };
   return (
     <div className="top">
       <div className="logo">westagram</div>
       <div className="user" onKeyUp={buttonColorChange}>
+        <div className="resiterMember" />
         <input
           className="logId"
           type="text"
@@ -43,15 +58,14 @@ const Login = () => {
           onChange={handlePwInput}
         />
       </div>
-      <Link to="/main-leehyeongjoon">
-        <button
-          // className={`loginButton ${isButtonActive ? 'is-active' : ''}`}
-          className={isButtonActive ? 'loginButtonActive ' : 'loginButton'}
-          onClick={onclick}
-        >
-          로그인
-        </button>
-      </Link>
+      <button
+        // className={`loginButton ${isButtonActive ? 'is-active' : ''}`}
+        className={isButtonActive ? 'loginButtonActive ' : 'loginButton'}
+        onClick={goToMain}
+      >
+        로그인
+      </button>
+
       <div className="forget">비밀번호를 잊으셨나요?</div>
     </div>
   );
