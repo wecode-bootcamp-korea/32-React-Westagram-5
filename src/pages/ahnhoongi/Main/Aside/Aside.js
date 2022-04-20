@@ -1,4 +1,5 @@
 import './Aside.scss';
+import './Friend.scss';
 import { Link } from 'react-router-dom';
 
 function Aside() {
@@ -38,7 +39,39 @@ function Aside() {
                 alt="프로필사진"
               />
               <div className="friend-name">
-                <p className="friend-id">name</p>
+                <p className="friend-id">wecode1</p>
+                <p className="friend-ago">1분전</p>
+              </div>
+            </div>
+            <div className="follow-link">
+              <Link to="" className="blue-link" />
+            </div>
+          </div>
+          <div className="friend">
+            <div className="friend-img-wrapper">
+              <img
+                className="friend-img"
+                src="/images/ahnhoongi/me.jpg"
+                alt="프로필사진"
+              />
+              <div className="friend-name">
+                <p className="friend-id">wecode2</p>
+                <p className="friend-ago">5분전</p>
+              </div>
+            </div>
+            <div className="follow-link">
+              <Link to="" className="blue-link" />
+            </div>
+          </div>
+          <div className="friend">
+            <div className="friend-img-wrapper">
+              <img
+                className="friend-img"
+                src="/images/ahnhoongi/me.jpg"
+                alt="프로필사진"
+              />
+              <div className="friend-name">
+                <p className="friend-id">wecode3</p>
                 <p className="friend-ago">10분전</p>
               </div>
             </div>
@@ -54,8 +87,8 @@ function Aside() {
                 alt="프로필사진"
               />
               <div className="friend-name">
-                <p className="friend-id">name</p>
-                <p className="friend-ago">10분전</p>
+                <p className="friend-id">wecode4</p>
+                <p className="friend-ago">15분전</p>
               </div>
             </div>
             <div className="follow-link">
@@ -70,40 +103,8 @@ function Aside() {
                 alt="프로필사진"
               />
               <div className="friend-name">
-                <p className="friend-id">name</p>
-                <p className="friend-ago">10분전</p>
-              </div>
-            </div>
-            <div className="follow-link">
-              <Link to="" className="blue-link" />
-            </div>
-          </div>
-          <div className="friend">
-            <div className="friend-img-wrapper">
-              <img
-                className="friend-img"
-                src="/images/ahnhoongi/me.jpg"
-                alt="프로필사진"
-              />
-              <div className="friend-name">
-                <p className="friend-id">name</p>
-                <p className="friend-ago">10분전</p>
-              </div>
-            </div>
-            <div className="follow-link">
-              <Link to="" className="blue-link" />
-            </div>
-          </div>
-          <div className="friend">
-            <div className="friend-img-wrapper">
-              <img
-                className="friend-img"
-                src="/images/ahnhoongi/me.jpg"
-                alt="프로필사진"
-              />
-              <div className="friend-name">
-                <p className="friend-id">name</p>
-                <p className="friend-ago">10분전</p>
+                <p className="friend-id">wecode5</p>
+                <p className="friend-ago">20분전</p>
               </div>
             </div>
             <div className="follow-link">
@@ -128,8 +129,8 @@ function Aside() {
                 alt="프로필사진"
               />
               <div className="friend-name">
-                <p className="friend-id">name</p>
-                <p className="friend-ago">10분전</p>
+                <p className="friend-id">wecode6</p>
+                <p className="friend-ago">wecode1님 외 2명이 팔로우 합니다.</p>
               </div>
             </div>
             <div className="follow-link">
@@ -146,8 +147,8 @@ function Aside() {
                 alt="프로필사진"
               />
               <div className="friend-name">
-                <p className="friend-id">name</p>
-                <p className="friend-ago">10분전</p>
+                <p className="friend-id">wecode7</p>
+                <p className="friend-ago">wecode2님 외 3명이 팔로우 합니다.</p>
               </div>
             </div>
             <div className="follow-link">
@@ -164,8 +165,8 @@ function Aside() {
                 alt="프로필사진"
               />
               <div className="friend-name">
-                <p className="friend-id">name</p>
-                <p className="friend-ago">10분전</p>
+                <p className="friend-id">wecode8</p>
+                <p className="friend-ago">wecode3님 외 4명이 팔로우 합니다.</p>
               </div>
             </div>
             <div className="follow-link">
@@ -175,6 +176,13 @@ function Aside() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="westagram-info">
+        <p>
+          소개 도움말 홍보 센터 API 채용 정보 개인정보처리방침 약관 위치 인기
+          계정 해시태그 언어
+        </p>
+        <p>© 2022 WESTAGRAM FROM META</p>
       </div>
     </div>
   );

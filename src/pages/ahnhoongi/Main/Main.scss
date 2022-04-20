@@ -105,10 +105,12 @@
             }
             .disabled {
               color: lightblue;
+              cursor: default;
             }
 
             .abled {
               color: blue;
+              cursor: pointer;
             }
           }
         }

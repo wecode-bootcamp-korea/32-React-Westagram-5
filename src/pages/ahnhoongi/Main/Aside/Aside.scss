@@ -9,40 +9,6 @@
     font-size: 13px;
   }
 
-  .friend {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0px;
-
-    .friend-img-wrapper {
-      display: flex;
-
-      .friend-img {
-        border-radius: 100%;
-        width: 50px;
-        border: 2px solid red;
-      }
-
-      .friend-name {
-        margin: auto 0px;
-        padding-left: 10px;
-
-        .friend-id {
-          font-size: 15px;
-          font-weight: bold;
-        }
-        .friend-ago {
-          font-size: 15px;
-        }
-      }
-    }
-
-    .follow-link {
-      display: flex;
-      align-items: center;
-    }
-  }
-
   .blue-link {
     text-decoration: none;
     color: dodgerblue;
@@ -96,6 +62,7 @@
   }
 
   .follow {
+    margin-bottom: 20px;
     background-color: white;
     border: 1px solid rgb(219, 219, 219);
 
@@ -108,6 +75,13 @@
       height: 200px;
       overflow: auto;
       padding: 0px 20px;
+    }
+  }
+  .westagram-info {
+    padding: 10px;
+    p {
+      color: rgb(178, 178, 178);
+      margin-bottom: 10px;
     }
   }
 }

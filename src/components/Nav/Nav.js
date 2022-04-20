@@ -6,7 +6,7 @@ function Nav() {
     <nav className="nav">
       <div className="logo">
         <i className="fa-brands fa-instagram" />
-        <Link className="logo-name" to="/">
+        <Link className="logo-name" to="">
           Westagram
         </Link>
       </div>

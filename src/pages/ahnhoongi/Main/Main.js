@@ -74,9 +74,9 @@ const MainHG = props => {
                 </div>
               </div>
               <div className="whoLikes">
-                <span className="name">wecode님</span>
+                <span className="name">wecode1님</span>
                 <span>
-                  외 <span style={{ fontWeight: 'bold' }}>1412명</span>이
+                  외 <span style={{ fontWeight: 'bold' }}>8명</span>이
                   좋아합니다
                 </span>
               </div>

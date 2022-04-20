@@ -23,7 +23,7 @@ function Router() {
         <Route path="/login-leehyeongjoon" element={<LoginHJ />} />
         <Route path="/main-leehyeongjoon" element={<MainHJ />} />
 
-        <Route path="/" element={<LoginHG />} />
+        <Route path="/login-ahnhoongi" element={<LoginHG />} />
         <Route path="/main-ahnhoongi" element={<MainHG />} />
 
         <Route path="/login-leenayeon" element={<LoginNY />} />

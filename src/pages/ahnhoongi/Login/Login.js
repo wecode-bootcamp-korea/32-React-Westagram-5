@@ -1,13 +1,35 @@
 import React, { useState } from 'react';
 import './Login.scss';
 import { useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 const LoginHG = () => {
   const navigate = useNavigate();
 
-  const goToMain = () => {
+  // function goToMain() {
+  //   fetch('http://10.58.4.56:8000/users/signup', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       email: idInput,
+  //       password: pwInput,
+  //     }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(result => console.log('결과: ', result));
+  //   // navigate('/main-ahnhoongi');
+  // }
+
+  function goToMain() {
+    // fetch('http://10.58.4.56:8000/users/signin', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     email: idInput,
+    //     password: pwInput,
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(result => console.log('결과: ', result));
     navigate('/main-ahnhoongi');
-  };
+  }
 
   const [idInput, setIdInput] = useState('');
 
@@ -24,7 +46,7 @@ const LoginHG = () => {
   const [isActive, setIsActive] = useState(false);
 
   const active = () => {
-    idInput.includes('@') && pwInput.length >= 8
+    idInput.includes('@') && pwInput.length >= 6
       ? setIsActive(true)
       : setIsActive(false);
   };
@@ -40,7 +62,7 @@ const LoginHG = () => {
   return (
     <main className="login-page">
       <div className="logo">
-        <a href=" ">Westagram</a>
+        <Link to="">Westagram</Link>
       </div>
       <form className="container">
         <input
