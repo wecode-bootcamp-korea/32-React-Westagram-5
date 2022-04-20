@@ -11,8 +11,24 @@ function Login() {
   const [pw, setPw] = useState('');
   const [btn, setBtn] = useState(false);
 
+  // 메인 이동
+
   const goToMain = () => {
     navigate('/main-leenayeon');
+  };
+
+  const signUp = () => {
+    fetch('http://10.58.1.201:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: id,
+        password: pw,
+      }),
+    })
+      .then(res => res.json())
+      .then(result => {
+        result.message === 'SUCCESS' ? goToMain() : alert('noooo');
+      });
   };
 
   const handleIdInput = e => {
@@ -51,7 +67,7 @@ function Login() {
           type="password"
           placeholder="비밀번호"
         />
-        <button className={btn ? 'active' : 'unactive'} onClick={goToMain}>
+        <button className={btn ? 'active' : 'unactive'} onClick={signUp}>
           로그인
         </button>
       </main>

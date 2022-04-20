@@ -1,11 +1,22 @@
 /*eslint-disable*/
 
 import React from 'react';
+import Aside from './Aside/Aside';
 import './Main.scss';
+import { useState } from 'react';
 
 function Main() {
+  const [comment, setComment] = useState(''); // input창에 보여지는
+  const [commnetArr, setCommnetArr] = useState([]); // UI에 보여지는
+
+  const writeComment = e => {
+    setComment(e.target.value);
+  };
+
+  const sendComment = () => {};
+
   return (
-    <body>
+    <div>
       <nav>
         <div className="iconLeft">
           <img className="icon_insta" src="images/leenayeon/insta.png" />
@@ -13,7 +24,7 @@ function Main() {
         </div>
 
         <div className="iconCenter">
-          <input type="text" class="searchBar" placeholder="검색" />
+          <input type="text" className="searchBar" placeholder="검색" />
           <img className="icon_magnify" src="images/leenayeon/magnify.png" />
         </div>
 
@@ -85,130 +96,26 @@ function Main() {
                 <div className="foot_time">
                   <span>42</span>분 전
                 </div>
+
+                {/* <span>{newComment}</span> */}
               </div>
               <div className="art_footWrite">
                 <input
                   className="foot_write"
                   type="text"
+                  onChange={writeComment}
                   placeholder=" 댓글 달기..."
                 />
-                <button className="foot_butt">게시</button>
+                <button className="foot_butt" onClick={sendComment}>
+                  게시
+                </button>
               </div>
             </div>
           </article>
         </div>
-
-        <div className="main-right">
-          <div className="rightHead">
-            <img className="profilePhoto" src="images/leenayeon/arrDog.jpg" />
-            <div className="profileMain">
-              <span className="profileId">w-concept </span>
-              <span className="profileDetail">WeCode | 위코드</span>
-            </div>
-          </div>
-
-          <article>
-            <div className="rightStory">
-              <div className="storyHead">
-                <span className="storyName">스토리</span>
-                <button className="storyBtn">모두 보기</button>
-              </div>
-
-              <div className="storyList">
-                <div className="storyMain">
-                  <img
-                    className="otherPhoto"
-                    src="images/leenayeon/arrDog.jpg"
-                  />
-
-                  <div className="otherPerson">
-                    <span className="otherId">baemin_official</span>
-                    <span className="otherTime">1시간 전</span>
-                  </div>
-                </div>
-
-                <div className="storyMain">
-                  <img
-                    className="otherPhoto"
-                    src="images/leenayeon/arrDog.jpg"
-                  />
-
-                  <div className="otherPerson">
-                    <span className="otherId">baemin_official</span>
-                    <span className="otherTime">1시간 전</span>
-                  </div>
-                </div>
-
-                <div className="storyMain">
-                  <img
-                    className="otherPhoto"
-                    src="images/leenayeon/arrDog.jpg"
-                  />
-
-                  <div className="otherPerson">
-                    <span className="otherId">baemin_official</span>
-                    <span className="otherTime">1시간 전</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="rightRecom">
-              <div className="recomHead">
-                <span className="recomName">회원님을 위한 추천</span>
-                <button className="recomBtn">모두 보기</button>
-              </div>
-              <div className="recomList">
-                <div className="recomMain">
-                  <img
-                    className="recomPhoto"
-                    src="images/leenayeon/arrDog.jpg"
-                  />
-                  <div className="recomPerson">
-                    <span className="recomId">joa</span>
-                    <span className="recomCount">
-                      joa님 외 56명이 좋아합니다.
-                    </span>
-                  </div>
-                </div>
-
-                <div className="recomMain">
-                  <img
-                    className="recomPhoto"
-                    src="images/leenayeon/arrDog.jpg"
-                  />
-                  <div className="recomPerson">
-                    <span className="recomId">joa</span>
-                    <span className="recomCount">
-                      joa님 외 56명이 좋아합니다.
-                    </span>
-                  </div>
-                </div>
-
-                <div className="recomMain">
-                  <img
-                    className="recomPhoto"
-                    src="images/leenayeon/arrDog.jpg"
-                  />
-                  <div className="recomPerson">
-                    <span className="recomId">joa</span>
-                    <span className="recomCount">
-                      joa님 외 56명이 좋아합니다.
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <footer>
-            Instagram 정보・지원・홍보
-            센터・API・채용정보・개인정보처리방침・약관・디렉터리・프로필・해시태그・언어
-            <br></br>
-            <br></br>© 2019 INSTAGRAM
-          </footer>
-        </div>
+        <Aside />
       </main>
-    </body>
+    </div>
   );
 }
 
