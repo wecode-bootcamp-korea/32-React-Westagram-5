@@ -1,1 +1,131 @@
-@import '../variables.scss';
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  background-color: rgb(249 249 249);
+
+  .totalmain {
+    display: flex;
+    // margin-top: 80px;
+
+    .main-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 616px;
+      // border: 1px solid rgb(232 232 232);
+      background-color: rgb(249 249 249);
+
+      .main-title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+
+        .leftTitle {
+          width: 100px;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          padding-left: 10px;
+          font-weight: bold;
+
+          .titletopprofile {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+          }
+        }
+        .menu-icon {
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .main-img {
+      height: 527px;
+
+      .mainphoto {
+        width: 615px;
+        height: 527px;
+      }
+    }
+
+    .main-icon {
+      height: 54px;
+      width: 615px;
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+
+      .lefticon {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-around;
+
+        .fa-heart {
+          font-size: 30px;
+          padding: 0 7px 0 15px;
+        }
+
+        .fa-comment {
+          font-size: 30px;
+          padding-left: 7px;
+        }
+
+        .fa-download {
+          font-size: 30px;
+          padding-left: 7px;
+        }
+      }
+    }
+
+    .bookmark-wrapper {
+      padding: 10px 15px;
+
+      .fa-bookmark {
+        font-size: 30px;
+      }
+    }
+
+    .main-like {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      height: 30px;
+
+      .wecode {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+      }
+
+      .wecode-padding {
+        padding-left: 10px;
+      }
+    }
+
+    .main-reply-box {
+      display: flex;
+
+      .name {
+        width: 98%;
+        height: 50px;
+        border: none;
+        border-top: 1px solid rgb(232 232 232);
+        padding: 0 0px 0 10px;
+      }
+
+      .reply-button {
+        width: 77px;
+        height: 52px;
+        border: none;
+        border-top: 1px solid rgb(232 232 232);
+        background: white;
+      }
+    }
+  }
+}

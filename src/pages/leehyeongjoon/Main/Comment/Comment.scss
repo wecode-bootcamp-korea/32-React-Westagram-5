@@ -1,0 +1,24 @@
+.main-reply {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+
+  .reply {
+    display: flex;
+    padding: 3px 0 0 10px;
+
+    .reply-id {
+      font-weight: bold;
+    }
+
+    .reply-info {
+      font-size: 15px;
+      padding: 0 5px 0 5px;
+    }
+
+    .see {
+      font-size: 15px;
+      color: rgb(153 153 153);
+    }
+  }
+}
