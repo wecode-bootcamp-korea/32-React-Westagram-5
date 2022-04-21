@@ -1,1 +1,57 @@
-@import '../variables.scss';
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  margin: 100px auto;
+  padding: 50px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+
+  .logo {
+    margin: 60px auto;
+    color: black;
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    text-decoration: none;
+  }
+
+  .container {
+    width: 300px;
+    .id,
+    .pw {
+      width: 100%;
+      height: 40px;
+      padding: 10px;
+      margin-bottom: 8px;
+      background-color: #fafafa;
+      border: 1px solid #efefef;
+      border-radius: 5px;
+    }
+
+    .bt {
+      width: 100%;
+      height: 30px;
+      margin: 12px auto;
+      border: none;
+      color: white;
+      border-radius: 5px;
+    }
+    .disabled {
+      background-color: #c4e1fb;
+      cursor: default;
+    }
+    .abled {
+      background-color: rgb(0, 85, 255);
+      cursor: pointer;
+    }
+  }
+
+  .forgot {
+    margin: 70px auto;
+    color: #04386b;
+    text-align: center;
+    text-decoration: none;
+  }
+}

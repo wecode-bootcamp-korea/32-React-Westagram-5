@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "wecode1",
+    "content": "1분전",
+    "isFollow": false
+  },
+  {
+    "id": 2,
+    "name": "wecode2",
+    "content": "2분전",
+    "isFollow": false
+  },
+  {
+    "id": 3,
+    "name": "wecode3",
+    "content": "3분전",
+    "isFollow": false
+  },
+  {
+    "id": 4,
+    "name": "wecode4",
+    "content": "4분전",
+    "isFollow": false
+  },
+  {
+    "id": 5,
+    "name": "wecode5",
+    "content": "5분전",
+    "isFollow": false
+  }
+]

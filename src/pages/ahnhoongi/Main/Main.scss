@@ -1,1 +1,117 @@
-@import '../variables.scss';
+//@import '..../styles/variables.scss';
+
+.main-page {
+  box-sizing: border-box;
+
+  .name {
+    margin-left: 20px;
+    margin-right: 5px;
+    font-weight: bold;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(250, 250, 250);
+    border: none;
+
+    .feeds {
+      width: 600px;
+      padding: 50px 0px;
+
+      article {
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(212, 212, 212);
+
+        .art-me {
+          display: flex;
+          height: 60px;
+          padding: 10px;
+
+          span {
+            img {
+              width: 40px;
+              border-radius: 100%;
+            }
+          }
+
+          p {
+            margin: 10px 10px;
+            font-weight: bold;
+          }
+        }
+
+        div {
+          .travel {
+            width: 100%;
+          }
+        }
+
+        div {
+          .likes {
+            display: flex;
+            justify-content: space-between;
+            font-size: 25px;
+
+            div {
+              margin: 10px 20px;
+
+              .fa-heart {
+                color: red;
+              }
+
+              i {
+                margin-right: 10px;
+              }
+            }
+          }
+          .whoLikes {
+            margin: 15px 0px;
+          }
+
+          .comment {
+            display: flex;
+            justify-content: space-between;
+            .fa-solid {
+              margin: 0px 20px;
+              color: red;
+            }
+          }
+
+          .reply {
+            display: flex;
+            margin-top: 10px;
+            border-top: 1px solid rgb(235, 235, 235);
+
+            input {
+              width: 100%;
+              height: 50px;
+              padding-left: 10px;
+              border: none;
+              background-color: white;
+            }
+
+            button {
+              width: 50px;
+              border: none;
+              background-color: white;
+            }
+            .disabled {
+              color: lightblue;
+              cursor: default;
+            }
+
+            .abled {
+              color: blue;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

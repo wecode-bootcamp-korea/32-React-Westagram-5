@@ -1,0 +1,17 @@
+ul {
+  width: 100%;
+  li {
+    padding-bottom: 5px;
+    list-style-type: none;
+  }
+}
+
+.write {
+  display: flex;
+  justify-content: space-between;
+  .write-icons {
+    .fa-solid {
+      margin-right: 20px;
+    }
+  }
+}

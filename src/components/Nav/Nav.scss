@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 20px 0px;
+
+  .logo {
+    .fa-instagram {
+      font-size: 30px;
+      margin-left: 100px;
+    }
+    .logo-name {
+      margin-left: 10px;
+      padding-left: 10px;
+      color: black;
+      border-left: 2px solid;
+      text-decoration: none;
+      font-family: 'Lobster', cursive;
+      font-size: 30px;
+    }
+  }
+
+  .search {
+    width: 200px;
+    height: 25px;
+    background-color: #f8f8f8;
+    border: 1px solid #d7dce3;
+    &::placeholder {
+      text-align: center;
+    }
+  }
+
+  .icons {
+    margin-right: 50px;
+    .fa-regular {
+      margin: 0px 5px;
+      font-size: 30px;
+    }
+  }
+}
