@@ -1,98 +1,66 @@
 import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import './Login.scss';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 const LoginHG = () => {
   const navigate = useNavigate();
 
-  // function goToMain() {
-  //   fetch('http://10.58.4.56:8000/users/signup', {
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       email: idInput,
-  //       password: pwInput,
-  //     }),
-  //   })
-  //     .then(response => response.json())
-  //     .then(result => console.log('결과: ', result));
-  //   // navigate('/main-ahnhoongi');
-  // }
+  const [inputValues, setInputValues] = useState({
+    id: '',
+    pw: '',
+  });
+
+  const handleInput = e => {
+    const { name, value } = e.target;
+    setInputValues(inputValues => ({ ...inputValues, [name]: value }));
+  };
+
+  const isValid = inputValues.id.includes('@') && inputValues.pw.length >= 5;
 
   function goToMain() {
-    // fetch('http://10.58.4.56:8000/users/signin', {
-    //   method: 'POST',
-    //   body: JSON.stringify({
-    //     email: idInput,
-    //     password: pwInput,
-    //   }),
-    // })
-    //   .then(response => response.json())
-    //   .then(result => console.log('결과: ', result));
+    fetch('http://10.58.4.56:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: inputValues.id,
+        password: inputValues.pw,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => result);
     navigate('/main-ahnhoongi');
   }
 
-  const [idInput, setIdInput] = useState('');
-
-  const handleIdInput = event => {
-    setIdInput(event.target.value);
-  };
-
-  const [pwInput, setPwInput] = useState('');
-
-  const handlePwInput = event => {
-    setPwInput(event.target.value);
-  };
-
-  const [isActive, setIsActive] = useState(false);
-
-  const active = () => {
-    idInput.includes('@') && pwInput.length >= 6
-      ? setIsActive(true)
-      : setIsActive(false);
-  };
-
-  const enter = event => {
-    if (isActive) {
-      if (event.key === 'Enter') {
-        goToMain();
-      }
-    }
-  };
-
   return (
     <main className="login-page">
-      <div className="logo">
-        <Link to="">Westagram</Link>
-      </div>
+      <Link to="" className="logo">
+        Westagram
+      </Link>
+
       <form className="container">
         <input
           type="text"
+          name="id"
           className="id"
           placeholder="전화번호, 사용자 이름 또는 이메일"
-          onChange={handleIdInput}
-          onKeyUp={active}
-          onKeyPress={enter}
+          onChange={handleInput}
         />
         <input
           type="password"
+          name="pw"
           className="pw"
           placeholder="비밀번호"
-          onChange={handlePwInput}
-          onKeyUp={active}
-          onKeyPress={enter}
+          onChange={handleInput}
         />
         <button
-          type="button"
-          className={`bt ${isActive ? 'abled' : 'disabled'}`}
-          disabled={isActive ? false : true}
+          className={`bt ${isValid ? 'abled' : 'disabled'}`}
+          disabled={!isValid}
           onClick={goToMain}
         >
           로그인
         </button>
       </form>
-      <div className="forgot">
-        <a href=" ">비밀번호를 잊으셨나요?</a>
-      </div>
+      <Link to=" " className="forgot">
+        비밀번호를 잊으셨나요?
+      </Link>
     </main>
   );
 };

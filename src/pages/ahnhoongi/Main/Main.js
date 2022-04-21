@@ -34,9 +34,9 @@ const MainHG = props => {
   const [commentList, setCommentList] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/commentData.json', {
-      method: 'GET', // GET method는 기본값이라서 생략이 가능합니다.
-    }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
+    fetch('/data/commentData.json', {
+      method: 'GET',
+    })
       .then(res => res.json())
       .then(data => {
         setCommentList(data);
@@ -83,9 +83,12 @@ const MainHG = props => {
               <ul className="commentLists">
                 {commentList.map(comment => {
                   return (
-                    <li key={comment.id}>
-                      <span className="name">{comment.userName}</span>
-                      <span>{comment.content}</span>
+                    <li className="comment" key={comment.id}>
+                      <div>
+                        <span className="name">{comment.userName}</span>
+                        <span>{comment.content}</span>
+                      </div>
+                      <i className="fa-solid fa-heart" />
                     </li>
                   );
                 })}

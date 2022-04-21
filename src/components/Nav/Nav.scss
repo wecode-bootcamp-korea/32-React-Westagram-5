@@ -11,13 +11,13 @@
       margin-left: 100px;
     }
     .logo-name {
+      margin-left: 10px;
+      padding-left: 10px;
+      color: black;
+      border-left: 2px solid;
+      text-decoration: none;
       font-family: 'Lobster', cursive;
       font-size: 30px;
-      margin-left: 10px;
-      border-left: 2px solid;
-      padding-left: 10px;
-      text-decoration: none;
-      color: black;
     }
   }
 
@@ -34,8 +34,8 @@
   .icons {
     margin-right: 50px;
     .fa-regular {
-      font-size: 30px;
       margin: 0px 5px;
+      font-size: 30px;
     }
   }
 }

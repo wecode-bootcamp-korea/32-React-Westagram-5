@@ -1,48 +1,42 @@
-//@import '..../styles/variables.scss';
-
 .login-page {
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 400px;
   margin: 100px auto;
+  padding: 50px;
   border: 1px solid #dddddd;
   border-radius: 10px;
-  padding: 50px;
 
   .logo {
+    margin: 60px auto;
+    color: black;
     font-family: 'Lobster', cursive;
     font-size: 40px;
-    margin: 60px auto;
-    a {
-      text-decoration: none;
-      color: black;
-    }
+    text-decoration: none;
   }
 
   .container {
     width: 300px;
-
     .id,
     .pw {
-      width: 298px;
+      width: 100%;
       height: 40px;
+      padding: 10px;
       margin-bottom: 8px;
       background-color: #fafafa;
       border: 1px solid #efefef;
       border-radius: 5px;
-      padding: 10px;
     }
 
     .bt {
       width: 100%;
       height: 30px;
+      margin: 12px auto;
       border: none;
       color: white;
       border-radius: 5px;
-      margin: 12px auto;
     }
     .disabled {
       background-color: #c4e1fb;
@@ -55,13 +49,9 @@
   }
 
   .forgot {
-    width: 100%;
+    margin: 70px auto;
+    color: #04386b;
     text-align: center;
-    margin: 70px 0px;
-
-    a {
-      text-decoration: none;
-      color: #04386b;
-    }
+    text-decoration: none;
   }
 }

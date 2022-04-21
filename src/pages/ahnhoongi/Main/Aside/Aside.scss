@@ -1,17 +1,13 @@
-//@import '../variables.scss';
 .aside {
   width: 350px;
   height: 100%;
-  background-color: rgb(250, 250, 250);
   margin: 20px;
-
-  a {
-    font-size: 13px;
-  }
+  background-color: rgb(250, 250, 250);
 
   .blue-link {
-    text-decoration: none;
     color: dodgerblue;
+    font-size: 13px;
+    text-decoration: none;
   }
 
   .info {
@@ -23,8 +19,8 @@
       display: flex;
 
       .info-img {
-        border-radius: 100%;
         width: 60px;
+        border-radius: 100%;
       }
 
       .info-name {
@@ -56,8 +52,8 @@
     }
     .story-friend-wrapper {
       height: 200px;
-      overflow: auto;
       padding: 0px 20px;
+      overflow: auto;
     }
   }
 
@@ -73,15 +69,15 @@
     }
     .follow-friend-wrapper {
       height: 200px;
-      overflow: auto;
       padding: 0px 20px;
+      overflow: auto;
     }
   }
   .westagram-info {
     padding: 10px;
     p {
-      color: rgb(178, 178, 178);
       margin-bottom: 10px;
+      color: rgb(178, 178, 178);
     }
   }
 }

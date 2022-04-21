@@ -1,8 +1,43 @@
-import './Aside.scss';
-import './Friend.scss';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Friend from './Friend';
+import './Friend.scss';
+import './Aside.scss';
 
 function Aside() {
+  const [friendList, setFriendList] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/friendData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setFriendList(data);
+      });
+  }, []);
+
+  const recommendList = [
+    {
+      id: 1,
+      name: 'wecode6',
+      content: 'wecode1님 외 2명이 팔로우 합니다.',
+      isFollow: true,
+    },
+    {
+      id: 2,
+      name: 'wecode7',
+      content: 'wecode2님 외 2명이 팔로우 합니다.',
+      isFollow: true,
+    },
+    {
+      id: 3,
+      name: 'wecode8',
+      content: 'wecode3님 외 2명이 팔로우 합니다.',
+      isFollow: true,
+    },
+  ];
+
   return (
     <div className="aside">
       <div className="info">
@@ -31,86 +66,16 @@ function Aside() {
           </Link>
         </div>
         <div className="story-friend-wrapper">
-          <div className="friend">
-            <div className="friend-img-wrapper">
-              <img
-                className="friend-img"
-                src="/images/ahnhoongi/me.jpg"
-                alt="프로필사진"
+          {friendList.map(friend => {
+            return (
+              <Friend
+                key={friend.id}
+                name={friend.name}
+                content={friend.content}
+                isFollow={friend.isFollow}
               />
-              <div className="friend-name">
-                <p className="friend-id">wecode1</p>
-                <p className="friend-ago">1분전</p>
-              </div>
-            </div>
-            <div className="follow-link">
-              <Link to="" className="blue-link" />
-            </div>
-          </div>
-          <div className="friend">
-            <div className="friend-img-wrapper">
-              <img
-                className="friend-img"
-                src="/images/ahnhoongi/me.jpg"
-                alt="프로필사진"
-              />
-              <div className="friend-name">
-                <p className="friend-id">wecode2</p>
-                <p className="friend-ago">5분전</p>
-              </div>
-            </div>
-            <div className="follow-link">
-              <Link to="" className="blue-link" />
-            </div>
-          </div>
-          <div className="friend">
-            <div className="friend-img-wrapper">
-              <img
-                className="friend-img"
-                src="/images/ahnhoongi/me.jpg"
-                alt="프로필사진"
-              />
-              <div className="friend-name">
-                <p className="friend-id">wecode3</p>
-                <p className="friend-ago">10분전</p>
-              </div>
-            </div>
-            <div className="follow-link">
-              <Link to="" className="blue-link" />
-            </div>
-          </div>
-          <div className="friend">
-            <div className="friend-img-wrapper">
-              <img
-                className="friend-img"
-                src="/images/ahnhoongi/me.jpg"
-                alt="프로필사진"
-              />
-              <div className="friend-name">
-                <p className="friend-id">wecode4</p>
-                <p className="friend-ago">15분전</p>
-              </div>
-            </div>
-            <div className="follow-link">
-              <Link to="" className="blue-link" />
-            </div>
-          </div>
-          <div className="friend">
-            <div className="friend-img-wrapper">
-              <img
-                className="friend-img"
-                src="/images/ahnhoongi/me.jpg"
-                alt="프로필사진"
-              />
-              <div className="friend-name">
-                <p className="friend-id">wecode5</p>
-                <p className="friend-ago">20분전</p>
-              </div>
-            </div>
-            <div className="follow-link">
-              <Link to="" className="blue-link" />
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
       <div className="follow">
@@ -121,60 +86,16 @@ function Aside() {
           </Link>
         </div>
         <div className="follow-friend-wrapper">
-          <div className="friend">
-            <div className="friend-img-wrapper">
-              <img
-                className="friend-img"
-                src="/images/ahnhoongi/me.jpg"
-                alt="프로필사진"
+          {recommendList.map(profile => {
+            return (
+              <Friend
+                key={profile.id}
+                name={profile.name}
+                content={profile.content}
+                isFollow={profile.isFollow}
               />
-              <div className="friend-name">
-                <p className="friend-id">wecode6</p>
-                <p className="friend-ago">wecode1님 외 2명이 팔로우 합니다.</p>
-              </div>
-            </div>
-            <div className="follow-link">
-              <Link to="" className="blue-link">
-                팔로우
-              </Link>
-            </div>
-          </div>
-          <div className="friend">
-            <div className="friend-img-wrapper">
-              <img
-                className="friend-img"
-                src="/images/ahnhoongi/me.jpg"
-                alt="프로필사진"
-              />
-              <div className="friend-name">
-                <p className="friend-id">wecode7</p>
-                <p className="friend-ago">wecode2님 외 3명이 팔로우 합니다.</p>
-              </div>
-            </div>
-            <div className="follow-link">
-              <Link to="" className="blue-link">
-                팔로우
-              </Link>
-            </div>
-          </div>
-          <div className="friend">
-            <div className="friend-img-wrapper">
-              <img
-                className="friend-img"
-                src="/images/ahnhoongi/me.jpg"
-                alt="프로필사진"
-              />
-              <div className="friend-name">
-                <p className="friend-id">wecode8</p>
-                <p className="friend-ago">wecode3님 외 4명이 팔로우 합니다.</p>
-              </div>
-            </div>
-            <div className="follow-link">
-              <Link to="" className="blue-link">
-                팔로우
-              </Link>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
       <div className="westagram-info">

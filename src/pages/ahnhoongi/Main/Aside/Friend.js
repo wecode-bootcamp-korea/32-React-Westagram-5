@@ -1,18 +1,27 @@
-// function Friend() {
-//   return (
-//     <div className="friend">
-//       <div className="friend-img-wrapper">
-//         <img className="friend-img" src="/images/ahnhoongi/me.jpg" alt="" />
-//         <div className="friend-name">
-//           <div className="friend-id">name</div>
-//           <div className="friend-ago">10분전</div>
-//         </div>
-//       </div>
-//       <div className="follow-link">
-//         <a className="blue-link" href=" "></a>
-//       </div>
-//     </div>
-//   );
-// }
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-// export default Friend;
+function Friend({ name, content, isFollow }) {
+  return (
+    <div className="friend">
+      <div className="friend-img-wrapper">
+        <img
+          className="friend-img"
+          src="/images/ahnhoongi/me.jpg"
+          alt="프로필사진"
+        />
+        <div className="friend-name">
+          <p className="friend-id">{name}</p>
+          <p className="friend-ago">{content}</p>
+        </div>
+      </div>
+      <div className="follow-link">
+        <Link to="" className="blue-link">
+          {isFollow ? '팔로우' : ''}
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export default Friend;
