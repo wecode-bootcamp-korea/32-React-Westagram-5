@@ -14,7 +14,7 @@ import Loginurim from './pages/ahnurim/Login/Login';
 import Mainurim from './pages/ahnurim/Login/Login';
 
 import Loginkia from './pages/kimkia/Login/Login';
-import Mainkia from './pages/kimkia/Login/Login';
+import Mainkia from './pages/kimkia/Main/Main';
 
 function Router() {
   return (

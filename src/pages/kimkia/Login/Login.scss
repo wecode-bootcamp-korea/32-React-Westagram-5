@@ -1,1 +1,74 @@
-@import '../variables.scss';
+@import '../../../styles/variables.scss';
+
+body {
+  @include flexCenter;
+  margin: 0;
+  height: 100vh;
+  background-color: $insta-gary;
+
+  .outsideBox {
+    display: flex;
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+
+    .insideBox {
+      width: 300px;
+      height: 400px;
+      margin: auto;
+      text-align: center;
+
+      h1 {
+        margin: 50px 0px 50px 0px;
+        font-size: 43px;
+        font-family: 'Beau Rivage', cursive;
+      }
+
+      input {
+        width: 250px;
+        height: 30px;
+        background-color: $insta-gary;
+        border: none;
+        border-radius: 2px;
+        opacity: 1;
+        font-size: small;
+      }
+
+      .phone {
+        margin-top: 10px;
+        padding-left: 10px;
+      }
+
+      .password {
+        margin-top: 10px;
+        padding-left: 10px;
+      }
+
+      .button {
+        width: 200px;
+        height: 30px;
+        color: #fff;
+        background-color: $button-blue;
+        border: none;
+        border-radius: 3px;
+        opacity: 1;
+        font-size: small;
+      }
+
+      .activebtn {
+        width: 250px;
+        background-color: aqua;
+        transition: all 0.3s;
+      }
+
+      .forgetPW {
+        display: Flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 50px;
+        color: rgba(10, 10, 118, 0.345);
+        font-size: 13px;
+      }
+    }
+  }
+}
