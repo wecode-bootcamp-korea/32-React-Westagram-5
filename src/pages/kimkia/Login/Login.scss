@@ -1,26 +1,16 @@
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-// white
-$insta-white: #fff;
-// gray
-$insta-gary: rgb(245, 245, 245);
-//border color rgba(var(--b6a,219,219,219),1);
-$button-blue: rgba(0, 149, 246, 0.3);
+@import '../../../styles/variables.scss';
 
 body {
-  @include flex-center;
+  @include flexCenter;
   margin: 0;
   height: 100vh;
   background-color: $insta-gary;
 
   .outsideBox {
-    background-color: white;
-    padding: 10px 10px 10px 10px;
     display: flex;
     margin: auto;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
 
     .insideBox {
       width: 300px;
@@ -29,19 +19,19 @@ body {
       text-align: center;
 
       h1 {
-        font-family: 'Beau Rivage', cursive;
-        font-size: 43px;
         margin: 50px 0px 50px 0px;
+        font-size: 43px;
+        font-family: 'Beau Rivage', cursive;
       }
 
       input {
+        width: 250px;
+        height: 30px;
         background-color: $insta-gary;
         border: none;
         border-radius: 2px;
-        width: 250px;
-        height: 30px;
-        font-size: small;
         opacity: 1;
+        font-size: small;
       }
 
       .phone {
@@ -55,13 +45,13 @@ body {
       }
 
       .button {
-        color: #fff;
-        background-color: $button-blue;
-        opacity: 1;
-        border: none;
-        border-radius: 3px;
         width: 200px;
         height: 30px;
+        color: #fff;
+        background-color: $button-blue;
+        border: none;
+        border-radius: 3px;
+        opacity: 1;
         font-size: small;
       }
 
@@ -72,12 +62,12 @@ body {
       }
 
       .forgetPW {
-        margin-top: 50px;
         display: Flex;
         justify-content: center;
         align-items: flex-end;
-        font-size: 13px;
+        margin-top: 50px;
         color: rgba(10, 10, 118, 0.345);
+        font-size: 13px;
       }
     }
   }

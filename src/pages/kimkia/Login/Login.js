@@ -1,12 +1,11 @@
-import './Login.scss';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
+import './Login.scss';
 
 function Login() {
-  const navigate = useNavigate();
   const [IdValue, setIdvalue] = useState('');
   const [PWValue, setPWvalue] = useState('');
-  const [btnValue, setbtnvalue] = useState(true);
+  const [BtnValue, setBtnValue] = useState(true);
 
   function goToMain() {
     fetch('http://10.58.7.17:8000/users/login', {
@@ -19,9 +18,6 @@ function Login() {
       .then(response => response.json())
       .then(result => console.log('결과: ', result));
   }
-
-  {
-  }
   function handleIdInput(E) {
     setIdvalue(E.target.value);
   }
@@ -32,9 +28,9 @@ function Login() {
 
   function active() {
     if (IdValue.includes('@') && PWValue.length > 5) {
-      setbtnvalue(false);
+      setBtnValue(false);
     } else {
-      setbtnvalue(true);
+      setBtnValue(true);
     }
   }
 
@@ -42,6 +38,7 @@ function Login() {
     <div className="outsideBox">
       <div className="insideBox">
         <h1>westagram</h1>
+
         <input
           onChange={handleIdInput}
           className="phone"
@@ -49,6 +46,7 @@ function Login() {
           placeholder="전화번호, 사용자 이름 또는 이메일"
           onKeyUp={active}
         />
+
         <br />
         <input
           onChange={handlePWInput}
@@ -61,18 +59,15 @@ function Login() {
         <br />
         <input
           type="button"
-          className={`button ${btnValue ? '' : 'activebtn'}`}
-          disabled={btnValue}
+          className={`button ${BtnValue ? '' : 'activebtn'}`}
+          disabled={BtnValue}
           onClick={goToMain}
           value="로그인"
         />
 
-        {/* <Link to="/Main">로그인</Link> */}
         <div className="forgetPW">비밀번호를 잊으셨나요?</div>
       </div>
     </div>
   );
 }
 export default Login;
-
-//IdValue.includes('@')&&//PWValue.length ?

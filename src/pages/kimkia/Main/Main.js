@@ -1,31 +1,33 @@
-import './Main.scss';
 import React, { useState, useEffect } from 'react';
-// import comment from './Data/commentDataKia.json';
-
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faTruckLoading } from "@fortawesome/free-solid-svg-icons";
+import './Main.scss';
 
 function Main() {
   const [commentValue, setCommentValue] = useState('');
   const [viewComment, setViewComment] = useState([]);
+  const [key, setKey] = useState(4);
+
   function Profile(props) {
     return (
-      <>
-        <div class="profile">
-          <img src="/images/kimkia/BasicAccountPhoto.png" class="ph" />
-          {props.profileName}
-        </div>
-      </>
+      <div class="profile">
+        <img
+          alt="profilePH"
+          src="/images/kimkia/BasicAccountPhoto.png"
+          id="photo"
+        />
+        {props.profileName}
+      </div>
     );
   }
 
   function Comment(props) {
+    console.log(props);
     let commentlist = props.comment;
     return commentlist.map(list => {
       return (
         <div>
           <span>{list.userid}</span> &nbsp;
           <span>{list.comment}</span>
+          <span>{list.content}</span>
         </div>
       );
     });
@@ -36,20 +38,19 @@ function Main() {
   }
 
   const addingComment = () => {
-    var copyComment = [...viewComment];
+    const copyComment = [...viewComment];
     if (commentValue.length > 0) {
-      copyComment.push({ userid: 'wecode_bootcamp', comment: commentValue });
+      copyComment.push({ id: key, userid: 'kia', comment: commentValue });
       setViewComment(copyComment);
+      setKey(key => key + 1);
       setCommentValue('');
     }
   };
 
-  console.log(viewComment);
-
   useEffect(() => {
     fetch('http://localhost:3000/data/commentDataKia.json', {
-      method: 'GET', // GET method는 기본값이라서 생략이 가능합니다.
-    }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
+      method: 'GET',
+    })
       .then(res => res.json())
       .then(data => {
         setViewComment(data);
@@ -57,9 +58,9 @@ function Main() {
   }, []);
 
   return (
-    <div>
+    <div className="all">
       <nav class="navigator">
-        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-instagram" />
         <img
           alt="logo"
           src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
@@ -67,18 +68,18 @@ function Main() {
 
         <div class="searchBox"></div>
         <div class="navIcon">
-          <i class="fa-solid fa-house-chimney"></i>
-          <i class="fa-solid fa-message"></i>
-          <i class="fa-solid fa-circle-plus"></i>
-          <i class="fa-solid fa-compass"></i>
-          <i class="fa-solid fa-heart"></i>
-          <i class="fa-solid fa-id-badge"></i>
+          <i class="fa-solid fa-house-chimney" />
+          <i class="fa-solid fa-message" />
+          <i class="fa-solid fa-circle-plus" />
+          <i class="fa-solid fa-compass" />
+          <i class="fa-solid fa-heart" />
+          <i class="fa-solid fa-id-badge" />
         </div>
       </nav>
 
       <div class="main">
         <div class="feeds">
-          <div class="profile" id="snap">
+          <div class="profile">
             <img
               alt="profilePh"
               src="/images/kimkia/profileph.png"
@@ -93,14 +94,13 @@ function Main() {
 
             <div class="commentBox">
               <Comment comment={viewComment} />
-              )
               <input onChange={writeComment} />
               <button onClick={addingComment}>게시</button>
             </div>
           </div>
         </div>
 
-        <div class="main-right">
+        <div class="mainRight">
           <Profile profileName="profile.spot" />
 
           <div class="storyBox">
