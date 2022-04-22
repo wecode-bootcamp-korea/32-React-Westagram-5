@@ -20,7 +20,6 @@ function Main() {
   }
 
   function Comment(props) {
-    console.log(props);
     let commentlist = props.comment;
     return commentlist.map(list => {
       return (
@@ -66,7 +65,7 @@ function Main() {
           src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
         />
 
-        <div class="searchBox"></div>
+        <div class="searchBox" />
         <div class="navIcon">
           <i class="fa-solid fa-house-chimney" />
           <i class="fa-solid fa-message" />
